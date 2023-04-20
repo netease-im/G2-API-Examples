@@ -1,0 +1,10 @@
+<resources>
+    <string name="audio_effect">Audio Effect</string>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="bgm_userid">User ID</string>
+    <string name="join_channel">Join Channel</string>
+    <string name="bgm_select_audio_ect">Select Audio Effect</string>
+    <string name="bgm_effect_1">Audio Effect 1</string>
+    <string name="bgm_effect_2">Audio Effect 2</string>
+    <string name="bgm_set_volumn">Set Volumn</string>
+</resources>

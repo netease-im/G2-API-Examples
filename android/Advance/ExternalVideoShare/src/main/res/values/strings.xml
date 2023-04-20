@@ -1,0 +1,11 @@
+<resources>
+    <string name="external_video_share">外部视频分享</string>
+    <string name="video_roomid">房间号</string>
+    <string name="video_userid">用户ID</string>
+    <string name="joinhome">加入房间</string>
+    <string name="video_choose">视频文件</string>
+    <string name="choose_file">选择文件</string>
+    <string name="start_external_play">播放</string>
+    <string name="please_join_Channel">请先加入房间</string>
+    <string name="stop_external_video">停止</string>
+</resources>

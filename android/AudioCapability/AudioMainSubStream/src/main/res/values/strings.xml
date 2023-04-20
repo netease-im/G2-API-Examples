@@ -1,0 +1,8 @@
+<resources>
+    <string name="audio_main_sub_stream">音频主辅流</string>
+    <string name="bgm_roomid">房间号</string>
+    <string name="bgm_userid">用户ID</string>
+    <string name="main_stream">主流</string>
+    <string name="sub_stream">辅流</string>
+    <string name="bgm_join_Channel">加入房间</string>
+</resources>

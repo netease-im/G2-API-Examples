@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_Container"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AudioqualityActivity">
+    <LinearLayout
+        android:id="@+id/ll_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/btn_back" />
+        <TextView
+            android:id="@+id/tv_room_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/audioquality"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_user_frame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/iv_user_img1"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/common_user_portrait"/>
+            <TextView
+                android:id="@+id/tv_user_id1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/iv_user_img2"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/common_user_portrait"/>
+            <TextView
+                android:id="@+id/tv_user_id2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/iv_user_img3"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/common_user_portrait"/>
+            <TextView
+                android:id="@+id/tv_user_id3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_user_frame2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_user_frame"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/iv_user_img4"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/common_user_portrait"/>
+            <TextView
+                android:id="@+id/tv_user_id4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/iv_user_img5"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/common_user_portrait"/>
+            <TextView
+                android:id="@+id/tv_user_id5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal">
+            <ImageView
+                android:id="@+id/iv_user_img6"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@mipmap/common_user_portrait"/>
+            <TextView
+                android:id="@+id/tv_user_id6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_edit_info"
+        android:layout_marginBottom="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="音频质量"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_quality_default"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/base_blue"
+                android:padding="0dp"
+                android:text="@string/audio_default" />
+
+            <Button
+                android:id="@+id/btn_quality_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/button_select_off"
+                android:padding="0dp"
+                android:text="@string/audio_normal" />
+
+            <Button
+                android:id="@+id/btn_quality_medium"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/button_select_off"
+                android:text="@string/audio_middle" />
+
+            <Button
+                android:id="@+id/btn_quality_high"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/button_select_off"
+                android:text="@string/highquality" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="320dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="3dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Medium_stereo"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/button_select_off"
+                android:padding="0dp"
+                android:text="@string/audio_quality_Medium_stereo" />
+
+            <Button
+                android:id="@+id/btn_high_stereo"
+                android:layout_width="90dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/button_select_off"
+                android:padding="0dp"
+                android:text="@string/audio_quality_high_stereo" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/audio_mode"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="240dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Scenario_default"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/base_blue"
+                android:padding="0dp"
+                android:text="@string/audio_default" />
+
+            <Button
+                android:id="@+id/btn_Scenario_speech"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/button_select_off"
+                android:text="@string/speak" />
+
+            <Button
+                android:id="@+id/btn_Scenario_music"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:background="@color/button_select_off"
+                android:text="@string/music" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_edit_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bgm_roomid"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_room_id"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/common_edit_bg"
+                android:paddingLeft="5dp"
+                android:text="1383" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bgm_userid"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/common_edit_bg"
+                android:paddingLeft="5dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_join_channel"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ll_set"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/common_button_bg"
+            android:text="@string/bgm_start_push"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+</RelativeLayout>

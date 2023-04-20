@@ -1,0 +1,87 @@
+<resources>
+    <string name="video_quality">Beauty</string>
+    <string name="beauty_roomid">Room ID</string>
+    <string name="beauty_userid">User ID</string>
+    <string name="bgm_join_channel">Join Channel</string>
+
+    <!--filter-->
+    <string name="filter_origin">origin</string>
+    <string name="filter_f1">f1</string>
+    <string name="filter_f2">f2</string>
+    <string name="filter_f3">f3</string>
+    <string name="filter_f4">f4</string>
+    <string name="filter_fn1">FN1</string>
+    <string name="filter_fn2">FN2</string>
+    <string name="filter_n2">n2</string>
+    <string name="filter_p1">P1</string>
+    <string name="filter_p2">P2</string>
+    <string name="filter_p3">P3</string>
+    <string name="filter_p4">P4</string>
+    <string name="filter_p5">P5</string>
+    <string name="filter_p6">P6</string>
+    <string name="filter_summer">Summer</string>
+    <string name="filter_winter">Winter</string>
+    <string name="filter_shimmer">Shimmer</string>
+    <string name="filter_feminine">Feminine</string>
+    <string name="filter_forest">Forest</string>
+    <string name="filter_waterl">Water</string>
+    <string name="filter_soda">Soda</string>
+    <string name="filter_refresh1">Refresh1</string>
+    <string name="filter_refresh2">Refresh2</string>
+    <string name="filter_refresh3">Refresh3</string>
+    <string name="filter_refresh4">Refresh4</string>
+    <string name="filter_refresh5">Refresh5</string>
+    <string name="filter_refresh6">Refresh6</string>
+    <string name="filter_fair">Fair</string>
+    <string name="filter_fair1">Fair1</string>
+    <string name="filter_fair2">Fair2</string>
+    <string name="filter_fair3">Fair3</string>
+    <string name="filter_fair4">Fair4</string>
+    <string name="filter_fair5">Fair5</string>
+    <string name="filter_fair6">Fair6</string>
+    <string name="filter_autumn">Autumn</string>
+    <string name="filter_nature">Nature</string>
+    <string name="filter_nature1">Nature1</string>
+    <string name="filter_nature2">Nature2</string>
+    <string name="filter_nature3">Nature3</string>
+    <string name="filter_nature4">Nature4</string>
+    <string name="filter_nature5">Nature5</string>
+    <string name="filter_nature6">Nature6</string>
+    <string name="filter_stamen">Stamen</string>
+    <string name="filter_texture">Texture</string>
+    <string name="filter_texture1">Texture1</string>
+    <string name="filter_texture2">Texture2</string>
+    <string name="filter_texture3">Texture3</string>
+    <string name="filter_texture4">Texture4</string>
+    <string name="filter_texture5">Texture5</string>
+    <string name="filter_texture6">Texture6</string>
+    <!--beauty-->
+    <string name="effect_recover">Recover</string>
+    <string name="effect_smooth">Smooth</string>
+    <string name="effect_whiten">Whiten</string>
+    <string name="effect_thinface">Thinface</string>
+    <string name="effect_mouth">Mouth</string>
+    <string name="effect_whiteteeth">Whiteteeth</string>
+    <string name="effect_lighteye">Lighteye</string>
+    <string name="effect_smallnose">Smallnose</string>
+    <string name="effect_eyedis">Eyedis</string>
+    <string name="effect_eyeangle">Eyeangle</string>
+    <string name="effect_bigeye">Bigeye</string>
+    <string name="effect_smallface">Smallface</string>
+    <string name="effect_jaw">Jaw</string>
+    <string name="effect_faceruddy">Faceruddy</string>
+    <string name="effect_longnose">Longnose</string>
+    <string name="effect_philtrum">Philtrum</string>
+    <string name="effect_mouthangle">Mouthangle</string>
+    <string name="effect_roundeye">Roundeye</string>
+    <string name="effect_eyecorner">Eyecorner</string>
+    <string name="effect_vface">Vface</string>
+    <string name="effect_underjaw">Underjaw</string>
+    <string name="effect_narrowface">Narrowface</string>
+    <string name="effect_cheekbone">Cheekbone</string>
+    <string name="effect_facesharpen">Facesharpen</string>
+    <string-array name="beauty_option_tags">
+        <item>Filter</item>
+        <item>Beauty</item>
+    </string-array>
+</resources>

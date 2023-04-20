@@ -1,0 +1,7 @@
+<resources>
+    <string name="speedtest_start">开始测速</string>
+    <string name="speedtest_result_guide">测速结果</string>
+    <string name="speedtest_input_guide">请输入用户ID</string>
+    <string name="speedtest_title">NERtc网络测速</string>
+    <string name="speedtest_input_error_tip">用户Id不能为空</string>
+</resources>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ll_localuser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_title"
+        android:layout_marginBottom="1dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_faceunity_beauty"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/common_button_bg"
+            android:text="@string/faceunity_beauty"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_bytedance_beauty"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/common_button_bg"
+            android:text="@string/bytedance_beauty"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btn_sensetime_beauty"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/common_button_bg"
+            android:text="@string/sensetime_beauty"
+            android:textColor="@color/white"
+            android:layout_marginTop="5dp"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/btn_back" />
+
+        <TextView
+            android:id="@+id/tv_room_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/external_beauty"
+            android:textSize="20sp"
+            android:textColor="@color/black"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

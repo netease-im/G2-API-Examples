@@ -1,0 +1,77 @@
+  .banner {
+    padding: 0;
+    background-color: #52575c;
+    color: white;
+  }
+  
+  .banner-text {
+    padding: 8px 20px;
+    margin: 0;
+  }
+
+  .logo {
+    display: block;
+    margin: 0 auto 35px;
+  }
+
+  .custom-container {
+    width: 400px;
+    height: 400px;
+    padding-top: 35px;
+    margin: 60px auto;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgb(47 56 111 / 10%);
+    border-radius: 8px;
+  }
+
+  .form-list {
+    display: flex;
+    padding: 20px 35px;
+  }
+
+  .share-form-list {
+    display: flex;
+    padding: 0 35px;
+  }
+
+  label {
+    width: 80px;
+  }
+
+  input {
+    display: inline-block;
+    width: 100%;
+    border: none;
+    outline: medium;
+    border-bottom: 1px solid #dcdfe5;
+    font-family: PingFangSC-Regular;
+    font-size: 17px;
+  }
+
+  button {
+    display: block;
+    width: 45%;
+    height: 35px;
+    margin: 0 auto;
+    border: none;
+    outline: medium;
+    background: #337eff;
+    border-radius: 25px;
+    font-family: PingFangSC-Regular;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+  .video-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  @media (max-width: 660px) {
+    .video-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }

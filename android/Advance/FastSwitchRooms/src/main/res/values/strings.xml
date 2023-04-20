@@ -1,0 +1,9 @@
+<resources>
+    <string name="fast_room_switch">快速切换房间</string>
+    <string name="bgm_join_Channel">加入房间</string>
+    <string name="bgm_room_switch">切换房间</string>
+    <string name="bgm_roomid">房间号</string>
+    <string name="success_switch_room">切换房间成功</string>
+    <string name="please_join_Channel">请先加入房间</string>
+    <string name="reenter_roomid">输入要切换的房间号</string>
+</resources>

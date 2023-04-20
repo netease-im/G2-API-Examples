@@ -1,0 +1,16 @@
+<resources>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="bgm_userid">User ID</string>
+    <string name="bgm_start_push">Join Channel</string>
+    <string name="music">Music</string>
+    <string name="speak">Speak</string>
+    <string name="audio_mode">Audio Mode</string>
+    <string name="highquality_stereo">HQS</string>
+    <string name="highquality">HQ</string>
+    <string name="audio_middle">AM</string>
+    <string name="audio_normal">AN</string>
+    <string name="audio_default">AD</string>
+    <string name="audio_quality_Medium_stereo">AQMS</string>
+    <string name="audio_quality_high_stereo">AQHS</string>
+    <string name="audioquality">Audio Quality</string>
+</resources>

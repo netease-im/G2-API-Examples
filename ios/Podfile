@@ -1,0 +1,12 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'NERTC-API-Example-OC' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for NERtc_ios
+  pod 'NERtcSDK', '4.6.20'
+  pod 'SSZipArchive'
+  pod 'Masonry'
+end

@@ -1,0 +1,11 @@
+<resources>
+    <string name="external_audio_capture"><![CDATA[External Video Capture&Render]]></string>
+    <string name="audio_choose">External Audio File</string>
+    <string name="choose_file">Choose File</string>
+    <string name="startplay">Start Play</string>
+    <string name="video_roomid">Room ID</string>
+    <string name="video_userid">User ID</string>
+    <string name="joinhome">Join Channel</string>
+    <string name="please_join_Channel">Please Join Channel</string>
+    <string name="stop_external_audio">Stop Play</string>
+</resources>

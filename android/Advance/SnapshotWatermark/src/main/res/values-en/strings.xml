@@ -1,0 +1,10 @@
+<resources>
+    <string name="snapshot_watermark">截图和水印</string>
+    <string name="local_snapshot">本地画面截图</string>
+    <string name="remote_snapshot">远端画面截图</string>
+    <string name="video_roomid">房间号</string>
+    <string name="video_userid">用户ID</string>
+    <string name="join_channel">加入房间</string>
+    <string name="imageWatermark">图片水印</string>
+    <string name="textWatermark">文字水印</string>
+</resources>

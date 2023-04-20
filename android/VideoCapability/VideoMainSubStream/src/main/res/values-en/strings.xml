@@ -1,0 +1,8 @@
+<resources>
+    <string name="video_main_sub_stream">Video Main Sub Stream</string>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="bgm_userid">User ID</string>
+    <string name="bgm_join_channel">Join Channel</string>
+    <string name="main_stream">Main Stream</string>
+    <string name="sub_stream">Sub Stream</string>
+</resources>

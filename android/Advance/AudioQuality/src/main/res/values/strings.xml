@@ -1,0 +1,16 @@
+<resources>
+    <string name="bgm_roomid">房间号</string>
+    <string name="bgm_userid">用户ID</string>
+    <string name="bgm_start_push">加入房间</string>
+    <string name="music">音乐</string>
+    <string name="speak">语音</string>
+    <string name="audio_mode">音频模式</string>
+    <string name="highquality_stereo">高质量立体</string>
+    <string name="highquality">高质量</string>
+    <string name="audio_middle">中等</string>
+    <string name="audio_normal">普通</string>
+    <string name="audio_default">默认</string>
+    <string name="audio_quality_Medium_stereo">中等质量立体音</string>
+    <string name="audio_quality_high_stereo">高质量立体音</string>
+    <string name="audioquality">音频质量</string>
+</resources>

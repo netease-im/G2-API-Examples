@@ -1,0 +1,10 @@
+<resources>
+    <string name="video_configuration">Video Configuration</string>
+    <string name="switch_camera">Switch Camera</string>
+    <string name="flashon">Flash On</string>
+    <string name="camera_zoom">Camera Zoom</string>
+    <string name="exposure_compensation">Exposure Compensation</string>
+    <string name="video_roomid">Room ID</string>
+    <string name="video_userid">User ID</string>
+    <string name="Btn_join_home">Join Channel</string>
+</resources>

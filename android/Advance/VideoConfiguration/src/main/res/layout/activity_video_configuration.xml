@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_local_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_configuration"
+        android:layout_below="@+id/ll_top_title"
+        android:layout_marginBottom="1dp"
+        android:background="@color/black"
+        android:orientation="horizontal">
+
+        <com.netease.lava.nertc.sdk.video.NERtcVideoView
+            android:id="@+id/vv_local_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+
+        <com.netease.lava.nertc.sdk.video.NERtcVideoView
+            android:id="@+id/vv_remote_user"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/acs_local_scaling_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_configuration"
+        android:layout_alignParentLeft="true"
+        android:background="#66FFFFFF"
+        android:dropDownSelector="@color/black"
+        android:entries="@array/scalingType" />
+
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/acs_remote_scaling_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ll_configuration"
+        android:layout_alignParentRight="true"
+        android:background="#66FFFFFF"
+        android:dropDownSelector="@color/black"
+        android:entries="@array/scalingType" />
+
+    <LinearLayout
+        android:id="@+id/ll_top_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="10dp">
+
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginLeft="10dp"
+            android:background="@mipmap/btn_back" />
+
+        <TextView
+            android:id="@+id/tv_room_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/video_configuration"
+            android:textColor="@color/black"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_edit_info"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:paddingLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video_roomid"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_room_id"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/common_edit_bg"
+                android:paddingLeft="5dp"
+                android:text="1383" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_weight="1.5"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/video_userid"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_user_id"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@drawable/common_edit_bg"
+                android:paddingLeft="5dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_join_channel"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ll_set"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/common_button_bg"
+            android:text="@string/join_channel"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+        <Button
+            android:id="@+id/btn_update_video"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ll_set"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/common_button_bg"
+            android:text="@string/Btn_update_config"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_configuration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_edit_info"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_edit_set"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_edit_info"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/coding_resolution"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_res_width"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@+id/tv_xencode"
+                android:text="360" />
+
+            <TextView
+                android:id="@+id/tv_xencode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/et_res_height"
+                android:text="x"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_res_height"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:text="640" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_edit_info"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/coding_cap_resolution"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_cap_res_wight"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_toLeftOf="@+id/tv_xencode2"
+                android:text="360" />
+
+            <TextView
+                android:id="@+id/tv_xencode2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/et_cap_res_height"
+                android:text="x"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_cap_res_height"
+                android:layout_width="60dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:text="640" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tv_frame_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="@string/video_framerate"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/acs_frame_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+
+                android:layout_toRightOf="@id/tv_frame_rate"
+                android:entries="@array/frameRate" />
+
+            <TextView
+                android:id="@+id/tv_bit_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/et_bit_rate"
+                android:text="@string/video_framerate"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/et_bit_rate"
+                android:layout_width="70dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:background="@color/white"
+                android:text="600" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <Switch
+                android:id="@+id/st_mirror_mode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/mirror_mode" />
+
+            <TextView
+                android:id="@+id/tv_orientation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/orientation"
+                android:text="@string/video_orientation"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/orientation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:entries="@array/orientation" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tv_video_cut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/video_cut"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/acs_video_cut"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_video_cut"
+                android:entries="@array/videoCropMode" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <TextView
+                android:id="@+id/tv_camera_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
+                android:text="@string/camera_rotation"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/acs_camera_rotation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_camera_rotation"
+                android:entries="@array/cameraRotation" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/lly_stats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_alignTop="@+id/ll_local_user"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/channel_users_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="频道中的用户数：0"
+            android:textColor="@color/green"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/channel_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="频道时长：0"
+            android:textColor="@color/green"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/receive_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接受码率：0"
+            android:textColor="@color/green"
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:id="@+id/send_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送码率：0"
+            android:textColor="@color/green"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/all_receive_bytes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="接收总字节数：0"
+            android:textColor="@color/green"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/all_send_bytes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="发送总字节数：0"
+            android:textColor="@color/green"
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:id="@+id/average_delay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上行平均往返时延：0"
+            android:textColor="@color/green"
+            android:textSize="15sp"/>
+    </LinearLayout>
+</RelativeLayout>

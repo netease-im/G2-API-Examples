@@ -1,0 +1,9 @@
+<resources>
+    <string name="sei_msg_send_recv">收发SEI消息</string>
+    <string name="bgm_roomid">房间号</string>
+    <string name="bgm_userid">用户ID</string>
+    <string name="bgm_join_channel">加入房间</string>
+    <string name="bgm_send_msg">发送SEI消息</string>
+    <string name="seimessage_message">SEI消息</string>
+    <string name="seimessage_content">NERtc真不错！</string>
+</resources>

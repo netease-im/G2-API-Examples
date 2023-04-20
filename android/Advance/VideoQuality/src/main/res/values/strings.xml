@@ -1,0 +1,9 @@
+<resources>
+    <string name="bgm_roomid">房间号</string>
+    <string name="bgm_userid">用户ID</string>
+    <string name="bgm_join_channel">加入房间</string>
+    <string name="videoquality_please_select_bitrate">请选择码率</string>
+    <string name="videoquality_please_select_fps">请选择帧率</string>
+    <string name="videoquality_please_select_resolution">请选择分辨率</string>
+    <string name="video_quality">视频质量</string>
+</resources>

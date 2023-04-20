@@ -1,0 +1,11 @@
+<resources>
+    <string name="external_video_share">External Video Share</string>
+    <string name="video_roomid">Room ID</string>
+    <string name="video_userid">User ID</string>
+    <string name="joinhome">Join Channel</string>
+    <string name="video_choose">Choose Video</string>
+    <string name="choose_file">Choose File</string>
+    <string name="start_external_play">Play</string>
+    <string name="please_join_Channel">Please Join Channel</string>
+    <string name="stop_external_video">Stop</string>
+</resources>

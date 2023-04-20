@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">videoquality</string>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="bgm_userid">User ID</string>
+    <string name="bgm_join_channel">Join Channel</string>
+    <string name="videoquality_please_select_bitrate">please Select Bitrate</string>
+    <string name="videoquality_please_select_fps">Please Select FPS</string>
+    <string name="videoquality_please_select_background">PLease Select Background</string>
+    <string name="video_quality">Video Quality</string>
+    <string name="virtual_background">Virtual Background</string>
+</resources>

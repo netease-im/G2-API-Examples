@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>自动播放受限</title>
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="custom-container">
+      <img src="./img/logo.png" alt="" class="logo" />
+      <div class="form-list">
+        <input type="text" id="channelName" name="房间名称" placeholder="请输入房间名称" required/>
+      </div>
+      <div class="form-list">
+        <input type="text" id="uid" name="UID" placeholder="请输入UID" required/>
+      </div>
+      <div class="form-list">
+        <button type="button" class="channel-cont" id="join">进房</button>
+        <button type="button" class="channel-cont" id="leave">离开</button>
+      </div>
+    </div>
+    <div class="video-container">
+      <div class="local">
+        <div id="localVideoContent"></div>
+      </div>
+      <div class="remote">
+        <div id="remoteVideoContent"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/jquery.min.js"></script>
+  <script src="./js/NERTC-v4.6.40.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+</html>
