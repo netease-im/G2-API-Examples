@@ -1,0 +1,9 @@
+<resources>
+    <string name="sei_msg_send_recv">SEI Msg Send and Recv</string>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="bgm_userid">User ID</string>
+    <string name="bgm_join_channel">Join Channel</string>
+    <string name="bgm_send_msg">Send SEI Message</string>
+    <string name="seimessage_message">SEI Msg</string>
+    <string name="seimessage_content">NERtc is good！</string>
+</resources>

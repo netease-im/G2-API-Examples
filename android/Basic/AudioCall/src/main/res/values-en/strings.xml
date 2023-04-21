@@ -1,0 +1,9 @@
+<resources>
+    <string name="network_info">Network Information</string>
+    <string name="voice_info">User Voice</string>
+    <string name="videocall_use_speaker">Use Speaker</string>
+    <string name="videocall_use_receiver">Use Receiver</string>
+    <string name="videocall_open_audio">Open Microphone</string>
+    <string name="videocall_close_audio">Close Microphone</string>
+    <string name="logo">Logo</string>
+</resources>

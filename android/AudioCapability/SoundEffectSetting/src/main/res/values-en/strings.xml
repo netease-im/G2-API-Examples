@@ -1,0 +1,17 @@
+<resources>
+    <string name="change_voice">Change Voice</string>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="bgm_userid">User ID</string>
+    <string name="bgm_join_channel">Join Channel</string>
+    <string name="bgm_select_voice_change_effect">Select Voice Change Effect</string>
+    <string name="bgm_select_Reverberation_effect">Select Reverberation Effect</string>
+    <string name="bgm_default">Default</string>
+    <string name="bgm_voice_2">M2W</string>
+    <string name="bgm_voice_3">W2M</string>
+    <string name="bgm_voice_4">M2lolita</string>
+    <string name="bgm_voice_5">W2lolita</string>
+    <string name="btn_effect_2">KTV</string>
+    <string name="btn_effect_3">Badroom</string>
+    <string name="btn_effect_4">Magnetic</string>
+    <string name="btn_effect_5">Faraway</string>
+</resources>

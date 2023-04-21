@@ -1,0 +1,16 @@
+<resources>
+    <string name="screen_share">屏幕共享</string>
+    <string name="join_channel">加入房间</string>
+    <string name="video_close">关闭视频</string>
+    <string name="share_start">开启屏幕共享</string>
+    <string name="video_roomid">房间号</string>
+    <string name="video_userid">用户ID</string>
+    <string name="screen_capture_min_sdk_version"><![CDATA[屏幕录制功能要求API >= 21]]></string>
+    <string name="screen_capture_server_is_null">屏幕录制服务为空</string>
+    <string name="stop_video">关闭视频</string>
+    <string name="start_video">开启视频</string>
+    <string name="stop_screen_share">关闭屏幕共享</string>
+    <string name="start_screen_share">开启屏幕共享</string>
+    <string name="screen_capture_request_denied">屏幕录制请求被拒绝</string>
+    <string name="screen_capture_server_start_failed">屏幕录制服务启动失败</string>
+</resources>

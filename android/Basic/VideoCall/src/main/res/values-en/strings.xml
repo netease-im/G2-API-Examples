@@ -1,0 +1,15 @@
+<resources>
+    <string name="videocall_user_back_camera">Use Back Camera</string>
+    <string name="videocall_user_front_camera">Use Front Camera</string>
+    <string name="videocall_open_camera">Open Camera</string>
+    <string name="videocall_close_camera">Close Camera</string>
+    <string name="videocall_video_item">Video Item</string>
+    <string name="videocall_audio_item">Audio Item</string>
+    <string name="videocall_open_audio">Open Microphone</string>
+    <string name="videocall_close_audio">Close Microphone</string>
+    <string name="videocall_use_speaker">Use Speaker</string>
+    <string name="videocall_use_receiver">Use Receiver</string>
+    <string name="logo">Logo</string>
+
+
+</resources>

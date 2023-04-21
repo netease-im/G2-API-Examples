@@ -1,0 +1,9 @@
+<resources>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="bgm_userid">User ID</string>
+    <string name="bgm_join_channel">Join Channel</string>
+    <string name="videoquality_please_select_bitrate">Please Select Bitrate</string>
+    <string name="videoquality_please_select_fps">Please Select FPS</string>
+    <string name="videoquality_please_select_resolution">Please Select Resolution</string>
+    <string name="video_quality">Video Quality</string>
+</resources>

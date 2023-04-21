@@ -1,0 +1,10 @@
+<resources>
+    <string name="external_beauty">第三方美颜</string>
+    <string name="faceunity_beauty">相芯美颜</string>
+    <string name="bytedance_beauty">火山美颜</string>
+    <string name="sensetime_beauty">商汤美颜</string>
+    <string name="video_roomid">房间号</string>
+    <string name="video_userid">用户ID</string>
+    <string name="Btn_join_home">加入房间</string>
+    <string name="whitening_degree">美白程度</string>
+</resources>

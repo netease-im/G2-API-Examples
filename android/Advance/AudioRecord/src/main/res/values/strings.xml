@@ -1,0 +1,8 @@
+<resources>
+    <string name="external_audio_record">本地音频录制</string>
+    <string name="video_roomid">房间号</string>
+    <string name="video_userid">用户ID</string>
+    <string name="joinhome">加入房间</string>
+    <string name="audio_name">录制文件名</string>
+    <string name="start_record">开始录制</string>
+</resources>

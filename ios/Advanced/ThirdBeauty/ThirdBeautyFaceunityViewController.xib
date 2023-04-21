@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ThirdBeautyFaceunityViewController">
+            <connections>
+                <outlet property="localUserView" destination="oeM-iN-Ylv" id="8eU-ug-2Wx"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outletCollection property="remoteViewArr" destination="dMg-JK-tan" id="Or9-XL-ptj"/>
+                <outletCollection property="remoteViewArr" destination="P8h-E9-UMQ" id="kyF-Bs-uZ5"/>
+                <outletCollection property="remoteViewArr" destination="j1W-B5-kWb" id="Tdq-JI-czl"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oeM-iN-Ylv" userLabel="localUserView">
+                    <rect key="frame" x="10" y="98" width="170" height="220"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="EP9-Dw-T1v"/>
+                        <constraint firstAttribute="height" constant="220" id="ddN-ik-ZS4"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dMg-JK-tan" userLabel="remotelUserView1">
+                    <rect key="frame" x="234" y="98" width="170" height="220"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="JSH-aq-Yml"/>
+                        <constraint firstAttribute="width" constant="170" id="vQV-Yv-IG2"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P8h-E9-UMQ" userLabel="remotelUserView2">
+                    <rect key="frame" x="10" y="334" width="170" height="220"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="170" id="2Ig-WX-5AU"/>
+                        <constraint firstAttribute="height" constant="220" id="2sP-mW-dqd"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="j1W-B5-kWb" userLabel="remotelUserView3">
+                    <rect key="frame" x="234" y="334" width="170" height="220"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="220" id="l2U-4y-qh7"/>
+                        <constraint firstAttribute="width" constant="170" id="nnW-TM-qmN"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GBI-1f-dj6">
+                    <rect key="frame" x="30" y="792" width="130" height="50"/>
+                    <color key="backgroundColor" red="0.000316050573" green="0.45888930560000002" blue="0.8898771405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="ZcR-Yq-VTg"/>
+                        <constraint firstAttribute="width" constant="130" id="zt7-ln-Ouj"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="滤镜">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onFilterButtonClick:" destination="-1" eventType="touchUpInside" id="drT-Dl-myc"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T9J-Ic-vZu">
+                    <rect key="frame" x="254" y="792" width="130" height="50"/>
+                    <color key="backgroundColor" red="0.000316050573" green="0.45888930560000002" blue="0.8898771405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="asV-cR-8AH"/>
+                        <constraint firstAttribute="height" constant="50" id="c1Q-f0-uYw"/>
+                    </constraints>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal" title="美颜">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="onBeautyButtonClick:" destination="-1" eventType="touchUpInside" id="awC-15-AHe"/>
+                    </connections>
+                </button>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vnp-6s-vfX">
+                    <rect key="frame" x="335" y="586" width="51" height="31"/>
+                    <color key="onTintColor" red="0.000316050573" green="0.45888930560000002" blue="0.8898771405" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <action selector="onSwitchButtonClick:" destination="-1" eventType="valueChanged" id="1Jr-Rr-ebz"/>
+                    </connections>
+                </switch>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="bottom" secondItem="GBI-1f-dj6" secondAttribute="bottom" constant="20" id="0Bt-YP-Pp3"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="dMg-JK-tan" secondAttribute="trailing" constant="10" id="4Fy-yk-JMK"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="T9J-Ic-vZu" secondAttribute="trailing" constant="30" id="4ju-VN-dOj"/>
+                <constraint firstItem="GBI-1f-dj6" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="6bV-Zb-LE8"/>
+                <constraint firstItem="Vnp-6s-vfX" firstAttribute="top" secondItem="j1W-B5-kWb" secondAttribute="bottom" constant="32" id="IDY-K3-3WJ"/>
+                <constraint firstItem="dMg-JK-tan" firstAttribute="centerY" secondItem="oeM-iN-Ylv" secondAttribute="centerY" id="PFm-X9-in1"/>
+                <constraint firstItem="j1W-B5-kWb" firstAttribute="centerX" secondItem="dMg-JK-tan" secondAttribute="centerX" id="Qhu-cx-dcu"/>
+                <constraint firstItem="j1W-B5-kWb" firstAttribute="centerY" secondItem="P8h-E9-UMQ" secondAttribute="centerY" id="Ym7-Ys-gbQ"/>
+                <constraint firstItem="P8h-E9-UMQ" firstAttribute="top" secondItem="oeM-iN-Ylv" secondAttribute="bottom" constant="16" id="alr-fO-zAm"/>
+                <constraint firstItem="T9J-Ic-vZu" firstAttribute="centerY" secondItem="GBI-1f-dj6" secondAttribute="centerY" id="boo-m2-3MA"/>
+                <constraint firstItem="oeM-iN-Ylv" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="fux-jT-FpS"/>
+                <constraint firstItem="P8h-E9-UMQ" firstAttribute="centerX" secondItem="oeM-iN-Ylv" secondAttribute="centerX" id="oBQ-4h-3U8"/>
+                <constraint firstItem="oeM-iN-Ylv" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="50" id="xz2-HI-7GL"/>
+                <constraint firstItem="Vnp-6s-vfX" firstAttribute="trailing" secondItem="T9J-Ic-vZu" secondAttribute="trailing" id="zoF-uG-hTJ"/>
+            </constraints>
+            <point key="canvasLocation" x="11.594202898550726" y="-11.383928571428571"/>
+        </view>
+    </objects>
+</document>

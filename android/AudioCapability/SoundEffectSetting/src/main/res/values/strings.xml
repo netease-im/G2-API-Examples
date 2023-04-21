@@ -1,0 +1,17 @@
+<resources>
+    <string name="change_voice">音效设置</string>
+    <string name="bgm_roomid">房间号</string>
+    <string name="bgm_userid">用户ID</string>
+    <string name="bgm_join_channel">加入房间</string>
+    <string name="bgm_select_voice_change_effect">请选择变声效果</string>
+    <string name="bgm_select_Reverberation_effect">请选择美声效果</string>
+    <string name="bgm_default">默认</string>
+    <string name="bgm_voice_2">男变女</string>
+    <string name="bgm_voice_3">女变男</string>
+    <string name="bgm_voice_4">男变萝莉</string>
+    <string name="bgm_voice_5">女变萝莉</string>
+    <string name="btn_effect_2">KTV</string>
+    <string name="btn_effect_3">卧室</string>
+    <string name="btn_effect_4">磁性</string>
+    <string name="btn_effect_5">悠远</string>
+</resources>

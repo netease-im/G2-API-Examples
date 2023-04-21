@@ -1,0 +1,11 @@
+<resources>
+    <string name="external_audio_capture"><![CDATA[外部视频采集&渲染]]></string>
+    <string name="audio_choose">外部音频文件</string>
+    <string name="choose_file">选择文件</string>
+    <string name="startplay">开始播放</string>
+    <string name="video_roomid">房间号</string>
+    <string name="video_userid">用户ID</string>
+    <string name="joinhome">加入房间</string>
+    <string name="please_join_Channel">请先加入房间</string>
+    <string name="stop_external_audio">停止播放</string>
+</resources>

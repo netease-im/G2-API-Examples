@@ -1,0 +1,12 @@
+<resources>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="bgm_userid">User ID</string>
+    <string name="bgm_join_Channel">Join Channel</string>
+    <string name="bgm_select_audio_bgm">Select Background Music</string>
+    <string name="bgm_bgm_1">Background Music 1</string>
+    <string name="bgm_bgm_2">Background Music 2</string>
+    <string name="bgm_set_volumn">Set Background Music Volumn</string>
+    <string name="bgm_pause">Pause Music</string>
+    <string name="bgm_resume">Resume Music</string>
+    <string name="audio_mix">Audio Mix</string>
+</resources>

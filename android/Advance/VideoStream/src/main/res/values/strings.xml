@@ -1,0 +1,16 @@
+<resources>
+    <string name="video_stream">旁路推流</string>
+    <string name="set_url">设置地址</string>
+    <string name="video_roomid">房间号</string>
+    <string name="video_userid">用户ID</string>
+    <string name="joinchannel">加入房间</string>
+    <string name="URL">推流地址</string>
+    <string name="please_join_Channel">请先加入房间</string>
+    <string name="please_config_url">请设置推流地址</string>
+    <string name="start_push_stream">开始推流</string>
+    <string name="stop_push_stream">停止推流</string>
+    <string name="push_stream_error">推流 %s: 错误 %d</string>
+    <string name="push_stream_state_pushing">开始推流</string>
+    <string name="push_stream_state_failed">推流失败</string>
+    <string name="push_stream_state_stopped">推流停止</string>
+</resources>

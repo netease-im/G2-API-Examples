@@ -1,0 +1,8 @@
+<resources>
+    <string name="external_audio_record">External Audio Record</string>
+    <string name="video_roomid">Room ID</string>
+    <string name="video_userid">User ID</string>
+    <string name="joinhome">Join Channel</string>
+    <string name="audio_name">Audio Name</string>
+    <string name="start_record">Start Record</string>
+</resources>

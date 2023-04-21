@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="videoCropMode">
+        <item>DEFAULT</item>
+        <item>CROP_16x9</item>
+        <item>CROP_4x3</item>
+        <item>CROP_1x1</item>
+    </string-array>
+    <string-array name="orientation">
+        <item>Auto</item>
+        <item>Fixed Portrait</item>
+        <item>Fixed Landscape</item>
+    </string-array>
+    <string-array name="frameRate">
+        <item>24 fps</item>
+        <item>7 fps</item>
+        <item>10 fps</item>
+        <item>15 fps</item>
+        <item>30 fps</item>
+    </string-array>
+    <string-array name="cameraRotation">
+        <item>DEFAULT</item>
+        <item>ROTATION_180</item>
+        <item>ANTICLOCKWISE_90</item>
+        <item>CLOCKWISE_90</item>
+    </string-array>
+    <string-array name="scalingType">
+        <item>SCALE_FIT</item>
+        <item>SCALE_FILL</item>
+        <item>SCALE_BALANCED</item>
+    </string-array>
+</resources>

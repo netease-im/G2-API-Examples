@@ -1,0 +1,10 @@
+<resources>
+    <string name="snapshot_watermark">Snapshot and Watermark</string>
+    <string name="local_snapshot">Local Snapshot</string>
+    <string name="remote_snapshot">Remote Snapshot</string>
+    <string name="video_roomid">Room ID</string>
+    <string name="video_userid">User ID</string>
+    <string name="join_channel">Join Channel</string>
+    <string name="imageWatermark">Image Watermark</string>
+    <string name="textWatermark">Text Watermark</string>
+</resources>

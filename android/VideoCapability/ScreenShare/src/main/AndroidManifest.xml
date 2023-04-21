@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.netease.nertc.screenshare">
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+    <application>
+        <service
+            android:name=".SimpleScreenShareService"
+            android:foregroundServiceType="mediaProjection">
+            <intent-filter>
+                <action android:name="com.netease.Yunxin.ScreenShare" />
+            </intent-filter>
+        </service>
+        <activity
+            android:name=".ScreenShareActivity"
+            android:exported="false" />
+    </application>
+
+</manifest>

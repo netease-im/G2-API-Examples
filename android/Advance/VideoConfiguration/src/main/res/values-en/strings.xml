@@ -1,0 +1,14 @@
+<resources>
+    <string name="video_configuration">Common Video Configuration</string>
+    <string name="video_roomid">Room ID</string>
+    <string name="video_userid">User ID</string>
+    <string name="Btn_update_config">Update Config</string>
+    <string name="coding_resolution">Coding Resolution</string>
+    <string name="coding_cap_resolution">Coding Capture Resolution</string>
+    <string name="video_framerate">Video Framerate</string>
+    <string name="mirror_mode">Mirror Mode(Remote Display)</string>
+    <string name="video_orientation">Video Orientation</string>
+    <string name="video_cut">Video Cut Mode</string>
+    <string name="join_channel">Join Channel</string>
+    <string name="camera_rotation">Camera Rotation</string>
+</resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="bgm_roomid">房间号</string>
+    <string name="bgm_userid">用户ID</string>
+    <string name="bgm_join_Channel">加入房间</string>
+    <string name="bgm_select_audio_bgm">选择背景音乐</string>
+    <string name="bgm_bgm_1">背景音乐1</string>
+    <string name="bgm_bgm_2">背景音乐2</string>
+    <string name="bgm_set_volumn">设置背景音乐音量</string>
+    <string name="bgm_pause">暂停伴音</string>
+    <string name="bgm_resume">继续伴音</string>
+    <string name="audio_mix">伴音</string>
+</resources>

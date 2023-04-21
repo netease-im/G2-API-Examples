@@ -1,0 +1,9 @@
+<resources>
+    <string name="network_info">网络状态</string>
+    <string name="voice_info">用户音量</string>
+    <string name="videocall_use_speaker">使用扬声器</string>
+    <string name="videocall_use_receiver">使用听筒</string>
+    <string name="videocall_open_audio">打开麦克风</string>
+    <string name="videocall_close_audio">关闭麦克风</string>
+    <string name="logo">图标</string>
+</resources>

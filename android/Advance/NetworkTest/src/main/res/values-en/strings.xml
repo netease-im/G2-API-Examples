@@ -1,0 +1,7 @@
+<resources>
+    <string name="speedtest_start">Start Test</string>
+    <string name="speedtest_result_guide">Test Result</string>
+    <string name="speedtest_input_guide">Please Input User ID</string>
+    <string name="speedtest_title">NERtc NetWork Test</string>
+    <string name="speedtest_input_error_tip">User Id Cannot be Empty</string>
+</resources>

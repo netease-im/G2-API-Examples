@@ -1,0 +1,14 @@
+<resources>
+    <string name="video_configuration">常用视频配置</string>
+    <string name="video_roomid">房间号</string>
+    <string name="video_userid">用户ID</string>
+    <string name="Btn_update_config">更新设置</string>
+    <string name="coding_resolution">编码分辨率</string>
+    <string name="coding_cap_resolution">采集分辨率</string>
+    <string name="video_framerate">视频帧率</string>
+    <string name="mirror_mode">镜像模式(远端显示)</string>
+    <string name="video_orientation">编码方向</string>
+    <string name="video_cut">视频剪裁模式</string>
+    <string name="join_channel">加入房间</string>
+    <string name="camera_rotation">摄像头旋转</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources>
+    <string name="fast_room_switch">Fast Switch Room</string>
+    <string name="bgm_join_Channel">Join Channel</string>
+    <string name="bgm_room_switch">Switch Room</string>
+    <string name="bgm_roomid">Room ID</string>
+    <string name="success_switch_room">Switch Room Success</string>
+    <string name="please_join_Channel">Please Join Channel</string>
+    <string name="reenter_roomid">Enter Room ID</string>
+</resources>

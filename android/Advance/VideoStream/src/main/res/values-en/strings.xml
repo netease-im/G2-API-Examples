@@ -1,0 +1,16 @@
+<resources>
+    <string name="video_stream">Video Stream</string>
+    <string name="set_url">Set Url</string>
+    <string name="video_roomid">Room ID</string>
+    <string name="video_userid">User ID</string>
+    <string name="joinchannel">Join Channel</string>
+    <string name="URL">URL</string>
+    <string name="please_join_Channel">Please Join Channel</string>
+    <string name="please_config_url">Please Set URL</string>
+    <string name="start_push_stream">Start Push Stream</string>
+    <string name="stop_push_stream">Stop Push Stream</string>
+    <string name="push_stream_error">Push %s: Error %d</string>
+    <string name="push_stream_state_pushing">Start Push</string>
+    <string name="push_stream_state_failed">Push Failed</string>
+    <string name="push_stream_state_stopped">Push Stop</string>
+</resources>

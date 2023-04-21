@@ -1,0 +1,10 @@
+<resources>
+    <string name="audio_effect">背景音效</string>
+    <string name="bgm_roomid">房间号</string>
+    <string name="bgm_userid">用户ID</string>
+    <string name="join_channel">加入房间</string>
+    <string name="bgm_select_audio_ect">选择背景音效</string>
+    <string name="bgm_effect_1">背景音效1</string>
+    <string name="bgm_effect_2">背景音效2</string>
+    <string name="bgm_set_volumn">设置音量大小</string>
+</resources>

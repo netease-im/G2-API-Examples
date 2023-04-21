@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="watermark" >
+        <item>时间戳水印</item>
+        <item>文字水印</item>
+        <item>图片水印</item>
+    </string-array>
+</resources>
