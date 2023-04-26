@@ -29,8 +29,8 @@
 ## <span id="前提条件">前提条件</span>
 请确认您已完成以下操作：
 
-- <a href="/docs/jcyOTA0ODM/DkyMDM2Mzk" target="_blank">已创建应用</a>。
-- <a href="/docs/jcyOTA0ODM/TYzODcyNjE" target="_blank">已开通音视频通话 2.0 服务</a>。
+- <a href="https://doc.yunxin.163.com/nertc/docs/jE3OTc5NTY?platform=android" target="_blank">已创建应用</a>。
+- <a href="https://doc.yunxin.163.com/nertc/docs/jY3MzMwODA?platform=android" target="_blank">已开通音视频通话 2.0 服务</a>。
 
 ## <span id="获取 App Key">获取 App Key</span>
 
@@ -85,15 +85,14 @@
 6. 运行工程。
     1. 将 iOS 设备连接到开发电脑，单击 Xcode 上方的的 **Any iOS Device**，在弹出的选项框选择该 iOS 设备。 
 
-    ![xcode_select_device_new.png.jpg](https://yx-web-nosdn.netease.im/common/5bf7b4e6c678580f65a58ca9c2b39834/xcode_select_device_new.png.jpg)
-    
-    ![xcode_select_real_device_new.jpg](https://yx-web-nosdn.netease.im/common/92e2c3adaf68ada15c6058a8fc5869bb/xcode_select_real_device_new.jpg)
 
+    ![xcode_select_device_new.png.jpg](https://yx-web-nosdn.netease.im/common/5bf7b4e6c678580f65a58ca9c2b39834/xcode_select_device_new.png.jpg)
       
+    ![xcode_select_real_device_new.jpg](https://yx-web-nosdn.netease.im/common/92e2c3adaf68ada15c6058a8fc5869bb/xcode_select_real_device_new.jpg)
     2. 单击 **Build** 按钮编译和运行示例源码。
 
+    
     ![xcode_build.jpg](https://yx-web-nosdn.netease.im/common/7c4635d1c30e6636a706cb668c41804c/xcode_build.jpg)
-
 
     3. 运行成功后，您可以开始操作Demo。
 
