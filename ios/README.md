@@ -23,14 +23,8 @@
 请确认您的开发环境满足以下要求
 
 - Xcode 10.0 或以上版本。
-- iOS 9.0 或以上版本且支持音视频的 iOS 设备。
-  ::: note notice
-  支持模拟器运行，但是由于模拟器缺少摄像头及麦克风能力，部分功能无法使用。
-  :::
+- iOS 9.0 或以上版本且支持音视频的 iOS 设备。支持模拟器运行，但是由于模拟器缺少摄像头及麦克风能力，部分功能无法使用。
 - iOS 设备和您的开发电脑已经连接到网络。
-
-
-
 
 ## <span id="前提条件">前提条件</span>
 请确认您已完成以下操作：
@@ -50,9 +44,7 @@
 
 ## <span id="快速跑通Sample Code">快速跑通Sample Code</span>
 
-::: note note
 在运行示例项目之前，请在云信控制台中为指定应用[开通调试模式](/docs/jcyOTA0ODM/TQ0MTI2ODQ?platformId=50002#修改鉴权方式)。调试模式建议只在集成开发阶段使用，请在应用正式上线前改回安全模式。
-:::
 
 1. 下载示例项目源码至您本地目录。
 
@@ -73,10 +65,10 @@
     end
     ```
     您可以通过修改pod 'NERtcSDK'后的sdk版本号，使用不同版本的sdk
-3. cd 到 ios 目录下，执行`pod install`，下载云信sdk以及其他第三方库，双击 `NERTC-API-Example-OC.xcworkspace`，通过 Xcode 打开工程。
-4. 在 `NTESAppConfig.h` 文件中填入您的 AppKey。
-5. （可选）登录 Apple 开发者账号。
-::: details 您可以参考此步骤登录账号，若已经登录，请忽略该步骤。
+2. cd 到 ios 目录下，执行`pod install`，下载云信sdk以及其他第三方库，双击 `NERTC-API-Example-OC.xcworkspace`，通过 Xcode 打开工程。
+3. 在 `NTESAppConfig.h` 文件中填入您的 AppKey。
+4. （可选）登录 Apple 开发者账号。
+    您可以参考此步骤登录账号，若已经登录，请忽略该步骤。
   1. 打开 Xcode，依次选择左上角菜单的 **Xcode** > **Preferences**。
 
   ![xcode_preference.jpg](https://yx-web-nosdn.netease.im/common/26cf60702949c4a5690de468a8b99971/xcode_preference.jpg)
@@ -89,10 +81,8 @@
   3. 输入 Apple ID 和 Password 登录。
   
   ![xcode_login_app_id.jpg](https://yx-web-nosdn.netease.im/common/fc7b4464113da6dd8939a74a75956b40/xcode_login_app_id.jpg)
-
-:::
-6. [设置签名并添加媒体设备权限](https://doc.yunxin.163.com/docs/jcyOTA0ODM/TM5NzI5MjI?platformId=50192#%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%AA%92%E4%BD%93%E8%AE%BE%E5%A4%87%E6%9D%83%E9%99%90)。
-7. 运行工程。
+5. [设置签名并添加媒体设备权限](https://doc.yunxin.163.com/docs/jcyOTA0ODM/TM5NzI5MjI?platformId=50192#%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%AA%92%E4%BD%93%E8%AE%BE%E5%A4%87%E6%9D%83%E9%99%90)。
+6. 运行工程。
     1. 将 iOS 设备连接到开发电脑，单击 Xcode 上方的的 **Any iOS Device**，在弹出的选项框选择该 iOS 设备。 
 
     ![xcode_select_device_new.png.jpg](https://yx-web-nosdn.netease.im/common/5bf7b4e6c678580f65a58ca9c2b39834/xcode_select_device_new.png.jpg)
