@@ -67,35 +67,36 @@
     您可以通过修改pod 'NERtcSDK'后的sdk版本号，使用不同版本的sdk
 2. cd 到 ios 目录下，执行`pod install`，下载云信sdk以及其他第三方库，双击 `NERTC-API-Example-OC.xcworkspace`，通过 Xcode 打开工程。
 3. 在 `NTESAppConfig.h` 文件中填入您的 AppKey。
-4. （可选）登录 Apple 开发者账号。
-    您可以参考此步骤登录账号，若已经登录，请忽略该步骤。
-  1. 打开 Xcode，依次选择左上角菜单的 **Xcode** > **Preferences**。
+4. （可选）登录 Apple 开发者账号。您可以参考此步骤登录账号，若已经登录，请忽略该步骤。
+  - 打开 Xcode，依次选择左上角菜单的 **Xcode** > **Preferences**。
 
   ![xcode_preference.jpg](https://yx-web-nosdn.netease.im/common/26cf60702949c4a5690de468a8b99971/xcode_preference.jpg)
 
 
-  2. 依次单击 **Accounts** > 左下角的 **+** > **Apple ID** > **Continue**。
+  - 依次单击 **Accounts** > 左下角的 **+** > **Apple ID** > **Continue**。
 
   ![xcode_account.jpg](https://yx-web-nosdn.netease.im/common/aff66bf004426c55e385316dc5b8413a/xcode_account.jpg)
   
-  3. 输入 Apple ID 和 Password 登录。
+  - 输入 Apple ID 和 Password 登录。
   
   ![xcode_login_app_id.jpg](https://yx-web-nosdn.netease.im/common/fc7b4464113da6dd8939a74a75956b40/xcode_login_app_id.jpg)
-5. [设置签名并添加媒体设备权限](https://doc.yunxin.163.com/docs/jcyOTA0ODM/TM5NzI5MjI?platformId=50192#%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%AA%92%E4%BD%93%E8%AE%BE%E5%A4%87%E6%9D%83%E9%99%90)。
-6. 运行工程。
-    1. 将 iOS 设备连接到开发电脑，单击 Xcode 上方的的 **Any iOS Device**，在弹出的选项框选择该 iOS 设备。 
+  
+  - [设置签名并添加媒体设备权限](https://doc.yunxin.163.com/docs/jcyOTA0ODM/TM5NzI5MjI?platformId=50192#%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%AA%92%E4%BD%93%E8%AE%BE%E5%A4%87%E6%9D%83%E9%99%90)。
+  
+   
+5. 运行工程。
+  - 将 iOS 设备连接到开发电脑，单击 Xcode 上方的的 **Any iOS Device**，在弹出的选项框选择该 iOS 设备。 
 
-
-    ![xcode_select_device_new.png.jpg](https://yx-web-nosdn.netease.im/common/5bf7b4e6c678580f65a58ca9c2b39834/xcode_select_device_new.png.jpg)
+  ![xcode_select_device_new.png.jpg](https://yx-web-nosdn.netease.im/common/5bf7b4e6c678580f65a58ca9c2b39834/xcode_select_device_new.png.jpg)
       
-    ![xcode_select_real_device_new.jpg](https://yx-web-nosdn.netease.im/common/92e2c3adaf68ada15c6058a8fc5869bb/xcode_select_real_device_new.jpg)
-    2. 单击 **Build** 按钮编译和运行示例源码。
-
-    
-    ![xcode_build.jpg](https://yx-web-nosdn.netease.im/common/7c4635d1c30e6636a706cb668c41804c/xcode_build.jpg)
-
-    3. 运行成功后，您可以开始操作Demo。
-
+  ![xcode_select_real_device_new.jpg](https://yx-web-nosdn.netease.im/common/92e2c3adaf68ada15c6058a8fc5869bb/xcode_select_real_device_new.jpg)
+  
+  - 单击 **Build** 按钮编译和运行示例源码。
+  
+  ![xcode_build.jpg](https://yx-web-nosdn.netease.im/common/7c4635d1c30e6636a706cb668c41804c/xcode_build.jpg)
+  
+  - 运行成功后，您可以开始操作Demo。
+  
   
 ## 联系我们
 
