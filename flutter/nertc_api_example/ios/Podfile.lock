@@ -1,0 +1,81 @@
+PODS:
+  - Flutter (1.0.0)
+  - nertc_core (0.0.1):
+    - Flutter
+    - NERtcSDK (= 4.6.52)
+    - NEWEYUV
+  - NERtcSDK (4.6.52):
+    - NERtcSDK/AiDenoise (= 4.6.52)
+    - NERtcSDK/AiHowling (= 4.6.52)
+    - NERtcSDK/Beauty (= 4.6.52)
+    - NERtcSDK/FaceDetect (= 4.6.52)
+    - NERtcSDK/RtcBasic (= 4.6.52)
+    - NERtcSDK/ScreenShare (= 4.6.52)
+    - NERtcSDK/Segment (= 4.6.52)
+    - NMCBasicModule (>= 1.9.0)
+  - NERtcSDK/AiDenoise (4.6.52):
+    - NMCBasicModule (>= 1.9.0)
+  - NERtcSDK/AiHowling (4.6.52):
+    - NMCBasicModule (>= 1.9.0)
+  - NERtcSDK/Beauty (4.6.52):
+    - NMCBasicModule (>= 1.9.0)
+  - NERtcSDK/FaceDetect (4.6.52):
+    - NMCBasicModule (>= 1.9.0)
+  - NERtcSDK/RtcBasic (4.6.52):
+    - NMCBasicModule (>= 1.9.0)
+  - NERtcSDK/ScreenShare (4.6.52):
+    - NMCBasicModule (>= 1.9.0)
+  - NERtcSDK/Segment (4.6.52):
+    - NMCBasicModule (>= 1.9.0)
+  - NEWEYUV (0.0.2)
+  - NMCBasicModule (2.0.0)
+  - path_provider_foundation (0.0.1):
+    - Flutter
+    - FlutterMacOS
+  - permission_handler_apple (9.0.4):
+    - Flutter
+  - yunxin_alog (0.0.1):
+    - Flutter
+    - YXAlog (~> 1.0.7)
+  - YXAlog (1.0.7)
+
+DEPENDENCIES:
+  - Flutter (from `Flutter`)
+  - nertc_core (from `.symlinks/plugins/nertc_core/ios`)
+  - path_provider_foundation (from `.symlinks/plugins/path_provider_foundation/ios`)
+  - permission_handler_apple (from `.symlinks/plugins/permission_handler_apple/ios`)
+  - yunxin_alog (from `.symlinks/plugins/yunxin_alog/ios`)
+
+SPEC REPOS:
+  trunk:
+    - NERtcSDK
+    - NEWEYUV
+    - NMCBasicModule
+    - YXAlog
+
+EXTERNAL SOURCES:
+  Flutter:
+    :path: Flutter
+  nertc_core:
+    :path: ".symlinks/plugins/nertc_core/ios"
+  path_provider_foundation:
+    :path: ".symlinks/plugins/path_provider_foundation/ios"
+  permission_handler_apple:
+    :path: ".symlinks/plugins/permission_handler_apple/ios"
+  yunxin_alog:
+    :path: ".symlinks/plugins/yunxin_alog/ios"
+
+SPEC CHECKSUMS:
+  Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
+  nertc_core: 440c56d00765192f1b37dfcba07803fed357e073
+  NERtcSDK: 54c89d96722b4850c18569168e006194ebbd9c64
+  NEWEYUV: 98dd84c08b6eb1437f7c228603e803aaa34e8aea
+  NMCBasicModule: 1ba35e839f95e93c4f4df12c3271104937290aef
+  path_provider_foundation: c68054786f1b4f3343858c1e1d0caaded73f0be9
+  permission_handler_apple: 44366e37eaf29454a1e7b1b7d736c2cceaeb17ce
+  yunxin_alog: c5532d2a6ab378baef9927fcae5ab19fe36c1103
+  YXAlog: ac9bab3aff1326caa72cc25aedc358bc8d4f1b31
+
+PODFILE CHECKSUM: 8e679eca47255a8ca8067c4c67aab20e64cb974d
+
+COCOAPODS: 1.12.1
