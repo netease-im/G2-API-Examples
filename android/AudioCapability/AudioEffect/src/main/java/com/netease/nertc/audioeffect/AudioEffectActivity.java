@@ -21,6 +21,8 @@ import com.netease.lava.nertc.sdk.NERtcConstants;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
+import com.netease.lava.nertc.sdk.NERtcUserJoinExtraInfo;
+import com.netease.lava.nertc.sdk.NERtcUserLeaveExtraInfo;
 import com.netease.lava.nertc.sdk.audio.NERtcCreateAudioEffectOption;
 import com.netease.lava.nertc.sdk.video.NERtcRemoteVideoStreamType;
 import com.netease.lava.nertc.sdk.video.NERtcVideoView;
@@ -368,6 +370,11 @@ public class AudioEffectActivity extends AppCompatActivity implements NERtcCallb
     }
 
     @Override
+    public void onUserJoined(long uid, NERtcUserJoinExtraInfo joinExtraInfo) {
+
+    }
+
+    @Override
     public void onUserLeave(long userId, int i) {
         Log.i(TAG, "onUserLeave uid: " + userId);
         NERtcVideoView userView = mContainer.findViewWithTag(userId);
@@ -378,6 +385,11 @@ public class AudioEffectActivity extends AppCompatActivity implements NERtcCallb
             //不展示远端
             userView.setVisibility(View.INVISIBLE);
         }
+    }
+
+    @Override
+    public void onUserLeave(long uid, int reason, NERtcUserLeaveExtraInfo leaveExtraInfo) {
+
     }
 
     @Override

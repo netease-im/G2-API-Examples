@@ -22,6 +22,8 @@ import com.netease.lava.nertc.sdk.NERtcConstants;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
+import com.netease.lava.nertc.sdk.NERtcUserJoinExtraInfo;
+import com.netease.lava.nertc.sdk.NERtcUserLeaveExtraInfo;
 import com.netease.lava.nertc.sdk.stats.NERtcAudioVolumeInfo;
 import com.netease.lava.nertc.sdk.video.NERtcRemoteVideoStreamType;
 import com.netease.lava.nertc.sdk.video.NERtcVideoStreamType;
@@ -29,6 +31,7 @@ import com.netease.lava.nertc.sdk.video.NERtcVideoView;
 import com.netease.nertc.config.DemoDeploy;
 
 import java.io.File;
+import java.nio.ByteBuffer;
 import java.util.Random;
 
 public class AudioRecordActivity extends AppCompatActivity implements NERtcCallbackEx, View.OnClickListener {
@@ -78,6 +81,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
         }
 
         @Override
+        public void onUserJoined(long uid, NERtcUserJoinExtraInfo joinExtraInfo) {
+
+        }
+
+        @Override
         public void onUserLeave(long userId, int i) {
             Log.i(TAG, "onUserLeave uid: " + userId);
             NERtcVideoView userView = mContainer.findViewWithTag(userId);
@@ -88,6 +96,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
                 //不展示远端
                 userView.setVisibility(View.INVISIBLE);
             }
+        }
+
+        @Override
+        public void onUserLeave(long uid, int reason, NERtcUserLeaveExtraInfo leaveExtraInfo) {
+
         }
 
         @Override
@@ -121,6 +134,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
         }
 
         @Override
+        public void onAudioEffectTimestampUpdate(long id, long timestampMs) {
+
+        }
+
+        @Override
         public void onLocalAudioVolumeIndication(int i, boolean b) {
 
         }
@@ -147,6 +165,16 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
 
         @Override
         public void onUserSubStreamAudioMute(long l, boolean b) {
+
+        }
+
+        @Override
+        public void onPermissionKeyWillExpire() {
+
+        }
+
+        @Override
+        public void onUpdatePermissionKey(String key, int error, int timeout) {
 
         }
 
@@ -365,6 +393,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
     }
 
     @Override
+    public void onUserJoined(long uid, NERtcUserJoinExtraInfo joinExtraInfo) {
+
+    }
+
+    @Override
     public void onUserLeave(long userId, int i) {
         Log.i(TAG, "onUserLeave uid: " + userId);
         NERtcVideoView userView = mContainer.findViewWithTag(userId);
@@ -375,6 +408,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
             //不展示远端
             userView.setVisibility(View.INVISIBLE);
         }
+    }
+
+    @Override
+    public void onUserLeave(long uid, int reason, NERtcUserLeaveExtraInfo leaveExtraInfo) {
+
     }
 
     @Override
@@ -416,6 +454,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
 
     @Override
     public void onWarning(int i) {
+
+    }
+
+    @Override
+    public void onApiCallExecuted(String apiName, int result, String message) {
 
     }
 
@@ -475,7 +518,42 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
     }
 
     @Override
+    public void onPermissionKeyWillExpire() {
+
+    }
+
+    @Override
+    public void onUpdatePermissionKey(String key, int error, int timeout) {
+
+    }
+
+    @Override
     public void onLocalVideoWatermarkState(NERtcVideoStreamType neRtcVideoStreamType, int i) {
+
+    }
+
+    @Override
+    public void onUserDataStart(long uid) {
+
+    }
+
+    @Override
+    public void onUserDataStop(long uid) {
+
+    }
+
+    @Override
+    public void onUserDataReceiveMessage(long uid, ByteBuffer bufferData, long bufferSize) {
+
+    }
+
+    @Override
+    public void onUserDataStateChanged(long uid) {
+
+    }
+
+    @Override
+    public void onUserDataBufferedAmountChanged(long uid, long previousAmount) {
 
     }
 
@@ -581,6 +659,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
 
     @Override
     public void onAudioMixingTimestampUpdate(long l) {
+
+    }
+
+    @Override
+    public void onAudioEffectTimestampUpdate(long id, long timestampMs) {
 
     }
 

@@ -18,6 +18,8 @@ import com.netease.lava.nertc.sdk.NERtcConstants;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
+import com.netease.lava.nertc.sdk.NERtcUserJoinExtraInfo;
+import com.netease.lava.nertc.sdk.NERtcUserLeaveExtraInfo;
 import com.netease.lava.nertc.sdk.audio.NERtcVoiceBeautifierType;
 import com.netease.lava.nertc.sdk.audio.NERtcVoiceChangerType;
 import com.netease.lava.nertc.sdk.video.NERtcRemoteVideoStreamType;
@@ -280,6 +282,11 @@ public class SoundEffectSeetingActivity extends AppCompatActivity implements NER
     }
 
     @Override
+    public void onUserJoined(long uid, NERtcUserJoinExtraInfo joinExtraInfo) {
+
+    }
+
+    @Override
     public void onBackPressed() {
         super.onBackPressed();
         exit();
@@ -296,6 +303,11 @@ public class SoundEffectSeetingActivity extends AppCompatActivity implements NER
             //不展示远端
             userView.setVisibility(View.INVISIBLE);
         }
+    }
+
+    @Override
+    public void onUserLeave(long uid, int reason, NERtcUserLeaveExtraInfo leaveExtraInfo) {
+
     }
 
     @Override
