@@ -9,7 +9,7 @@ import com.netease.lava.nertc.sdk.NERtc;
 import java.util.List;
 
 public class DemoDeploy {
-    public static final String APP_KEY = app_key;
+    public static final String APP_KEY = "app_key";
     private static final int PERMISSION_REQUEST_CODE = 100;
 
     public static void requestPermissionsIfNeeded(Activity context) {
