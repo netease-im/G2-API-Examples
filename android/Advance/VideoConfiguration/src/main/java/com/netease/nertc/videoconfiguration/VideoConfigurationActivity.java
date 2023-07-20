@@ -252,10 +252,8 @@ public class VideoConfigurationActivity extends AppCompatActivity implements NER
 
     private void onVideoConfigChange() {
         // 关闭本地视频采集以及发送
-//        NERtc.getInstance().enableLocalVideo(false);
         setVideoProfile(); //视频质量支持动态设置，不需要开关视频
         // 开启本地视频采集以及发送
-//        NERtc.getInstance().enableLocalVideo(true);
     }
 
     private void setVideoProfile() {

@@ -6,6 +6,7 @@
     <string name="coding_resolution">编码分辨率</string>
     <string name="coding_cap_resolution">采集分辨率</string>
     <string name="video_framerate">视频帧率</string>
+    <string name="video_bitrate">视频码率</string>
     <string name="mirror_mode">镜像模式(远端显示)</string>
     <string name="video_orientation">编码方向</string>
     <string name="video_cut">视频剪裁模式</string>
