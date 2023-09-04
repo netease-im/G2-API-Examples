@@ -14,7 +14,7 @@
     - [媒体流加密](./Advance/MediaEncryption)
     - [截图和水印](./Advance/SnapshotWatermark)
     - [快速切换房间](./Advance/FastSwitchRooms)
-- yin
+- 音频
     - [设置音质](./Advance/AudioQuality)
     - [伴音](./AudioCapability/AudioMix)
     - [音效](./AudioCapability/SoundEffectSetting)
@@ -72,9 +72,10 @@
 
 ## <span id="快速跑通 Sample Code">快速跑通 Sample Code</span>
 
-::: note note
-示例项目需要在 **RTC 调试模式**下使用，此时无需传入 Token。修改鉴权方式的方法请参见 <a href="https://doc.yunxin.163.com/nertc/docs/TQ0MTI2ODQ?platform=android" target="_blank">Token 鉴权</a> 。调试模式建议只在集成开发阶段使用，请在应用正式上线前改回安全模式。
-:::
+> 注意
+> 
+> **示例项目需要在 **RTC 调试模式**下使用，此时无需传入 Token。修改鉴权方式的方法请参见 <a href="https://doc.yunxin.163.com/nertc/docs/TQ0MTI2ODQ?platform=android" target="_blank">Token 鉴权</a> 。调试模式建议只在集成开发阶段使用，请在应用正式上线前改回安全模式。**
+
 
 1. 下载<a href="https://github.com/netease-im/G2-API-Examples/tree/main/android" target="_blank">NERTC 示例项目源码</a> 仓库至您本地工程。
 
@@ -87,9 +88,10 @@
 
 
 
-    ::: note note
-    本地工程目录请使用英文路径，不要包含中文字符。
-    :::
+    > 注意
+    > 
+    > 本地工程目录请使用英文路径，不要包含中文字符。
+    
 
   
 3. 在 `Deploy/src/main/java/com/netease/nertc/config/DemoDeploy` 文件中配置 AppKey。
@@ -103,9 +105,10 @@
     ![修改AppKey.png](https://yx-web-nosdn.netease.im/common/85996a8d98ea6ada7b06f5db0d20f565/修改AppKey.png)
 
 
-    ::: note note
-    AppKey前后需要加英文双引号。
-    :::
+    > 注意
+    > 
+    > AppKey前后需要加英文双引号。
+    
  
 
 
@@ -128,9 +131,10 @@
         此时表示设备已成功连接到 Android Studio。
 
  
-        ::: note note
-        请确保 Android 设备已开启开发者模式、USB 调试，并允许通过 USB 安装应用。
-        :::
+        > 注意
+        > 
+        > 请确保 Android 设备已开启开发者模式、USB 调试，并允许通过 USB 安装应用。
+        
   
 
     2. 单击 **Run** 按钮，编译并运行示例源码。
@@ -140,9 +144,10 @@
 
 
         
-    ::: note note
-    首次编译示例源码时，如果没有对应的依赖库或者构建工具，Android Studio 会自动下载示例源码，可能需要较长时间，请耐心等待。
-    :::
+    > 说明
+    > 
+    > 首次编译示例源码时，如果没有对应的依赖库或者构建工具，Android Studio 会自动下载示例源码，可能需要较长时间，请耐心等待。
+    
 
 
 5. 体验音视频通话。
