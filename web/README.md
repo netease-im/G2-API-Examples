@@ -38,7 +38,7 @@
 
 ## 前提条件
 >请确认您已完成以下操作：
-- [创建应用](https://doc.yunxin.163.com/jcyOTA0ODM/docs/zY4MjE3NDA?platform=web)
+- [创建应用](https://doc.yunxin.163.com/console/docs/TIzMDE4NTA?platform=console)
 - [开通音视频 2.0 服务](https://doc.yunxin.163.com/jcyOTA0ODM/docs/DA4NjQzNTU?platform=web)
 
 ## <span id="获取 App Key">获取 App Key</span>
