@@ -1,23 +1,23 @@
 
-这个开源示例 Demo 主要演示了音视频通话 2.0 NERTC SDK 重要功能的使用示例，您可以通过跑通 Sample Code，体验网易云信音视频通话 2.0 的功能，并参考示例项目源码，快速实现相应功能。
+该开源示例 Demo 主要演示了音视频通话 2.0 NERTC SDK 重要功能的使用示例，您可以通过跑通 Sample Code，体验网易云信音视频通话 2.0 的功能，并参考示例项目源码，快速实现相应功能。
 
 ## 示例项目结构
 音视频通话 2.0 API Example 包括如下功能：
 - 基础功能
-    - [语音通话](/Basic/AudioCall)
-    - [视频通话](/Basic/VideoCall)
+    - [语音通话](./Basic/AudioCall)
+    - [视频通话](./Basic/VideoCall)
 
 - 进阶功能
-    - [第三方美颜](/Advanced/ThirdBeauty)
-    - [云信美颜](/Advanced/NEBeauty)
-    - [旁路推流](/Advanced/VideoStream)
-    - [快速切换房间](/Advanced/SwitchRoom)
-    - [音效伴音](/Advanced/SetBackgroundMusic)
-    - [美声变声](/Advanced/AudioChange)
-    - [自定义视频采集&渲染](/Advanced/CustomCamera)
-    - [通话前网络测试](/Advanced/SpeedTest)
-    - [音质设定](/Advanced/SetAudioQuality)
-    - [画质设定](/Advanced/SetVideoQuality)
+    - [第三方美颜](./Advanced/ThirdBeauty)
+    - [云信美颜](./Advanced/NEBeauty)
+    - [旁路推流](./Advanced/VideoStream)
+    - [快速切换房间](./Advanced/SwitchRoom)
+    - [音效伴音](./Advanced/SetBackgroundMusic)
+    - [美声变声](./Advanced/AudioChange)
+    - [自定义视频采集&渲染](./Advanced/CustomCamera)
+    - [通话前网络测试](./Advanced/SpeedTest)
+    - [音质设定](./Advanced/SetAudioQuality)
+    - [画质设定](./Advanced/SetVideoQuality)
 
 ## <span id="开发环境">开发环境</span>
 请确认您的开发环境满足以下要求
@@ -29,16 +29,16 @@
 ## <span id="前提条件">前提条件</span>
 请确认您已完成以下操作：
 
-- <a href="https://doc.yunxin.163.com/nertc/docs/jE3OTc5NTY?platform=android" target="_blank">已创建应用</a>。
+- <a href="https://doc.yunxin.163.com/console/docs/TIzMDE4NTA?platform=console" target="_blank">已创建应用</a>。
 - <a href="https://doc.yunxin.163.com/nertc/docs/jY3MzMwODA?platform=android" target="_blank">已开通音视频通话 2.0 服务</a>。
 
 ## <span id="获取 App Key">获取 App Key</span>
 
-1. 在<a href="https://app.yunxin.163.com/index#/" target="_blank">网易云信控制台</a>的左侧导航栏中找到该应用，并单击应用名称。
-2. 单击 **App Key 管理**。
-3. 查看该应用的 App Key。
+1. 在<a href="https://app.yunxin.163.com/index#/" target="_blank">网易云信控制台</a>的左侧导航栏中找到您的应用，并单击应用名称。
+2. 单击 **AppKey 管理**页签，查看该应用的 App Key。
 
-    ![查看应用的AppKey](https://yx-web-nosdn.netease.im/quickhtml%2Fassets%2Fyunxin%2Fdoc%2FG2-GettingStarted-AppKey.png)
+
+    ![获取AppKey.png](https://yx-web-nosdn.netease.im/common/e50805409d30c7e65568463f5edeb2fd/获取AppKey.png)
 
 
 
@@ -68,36 +68,37 @@
 2. cd 到 ios 目录下，执行`pod install`，下载云信sdk以及其他第三方库，双击 `NERTC-API-Example-OC.xcworkspace`，通过 Xcode 打开工程。
 3. 在 `NTESAppConfig.h` 文件中填入您的 AppKey。
 4. （可选）登录 Apple 开发者账号。您可以参考此步骤登录账号，若已经登录，请忽略该步骤。
-  - 打开 Xcode，依次选择左上角菜单的 **Xcode** > **Preferences**。
-
-  ![xcode_preference.jpg](https://yx-web-nosdn.netease.im/common/26cf60702949c4a5690de468a8b99971/xcode_preference.jpg)
-
-
-  - 依次单击 **Accounts** > 左下角的 **+** > **Apple ID** > **Continue**。
-
-  ![xcode_account.jpg](https://yx-web-nosdn.netease.im/common/aff66bf004426c55e385316dc5b8413a/xcode_account.jpg)
-  
-  - 输入 Apple ID 和 Password 登录。
-  
-  ![xcode_login_app_id.jpg](https://yx-web-nosdn.netease.im/common/fc7b4464113da6dd8939a74a75956b40/xcode_login_app_id.jpg)
-  
-  - [设置签名并添加媒体设备权限](https://doc.yunxin.163.com/docs/jcyOTA0ODM/TM5NzI5MjI?platformId=50192#%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%AA%92%E4%BD%93%E8%AE%BE%E5%A4%87%E6%9D%83%E9%99%90)。
-  
+      1. 打开 Xcode，依次选择左上角菜单的 **Xcode** > **Preferences**。
+    
+      ![xcode_preference.jpg](https://yx-web-nosdn.netease.im/common/26cf60702949c4a5690de468a8b99971/xcode_preference.jpg)
+    
+    
+      2. 依次单击 **Accounts** > 左下角的 **+** > **Apple ID** > **Continue**。
+    
+      ![xcode_account.jpg](https://yx-web-nosdn.netease.im/common/aff66bf004426c55e385316dc5b8413a/xcode_account.jpg)
+      
+      3. 输入 Apple ID 和 Password 登录。
+      
+      ![xcode_login_app_id.jpg](https://yx-web-nosdn.netease.im/common/fc7b4464113da6dd8939a74a75956b40/xcode_login_app_id.jpg)
+      
+      4. [设置签名并添加媒体设备权限](https://doc.yunxin.163.com/docs/jcyOTA0ODM/TM5NzI5MjI?platformId=50192#%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D%E5%B9%B6%E6%B7%BB%E5%8A%A0%E5%AA%92%E4%BD%93%E8%AE%BE%E5%A4%87%E6%9D%83%E9%99%90)。
+      
    
 5. 运行工程。
-  - 将 iOS 设备连接到开发电脑，单击 Xcode 上方的的 **Any iOS Device**，在弹出的选项框选择该 iOS 设备。 
-
-  ![xcode_select_device_new.png.jpg](https://yx-web-nosdn.netease.im/common/5bf7b4e6c678580f65a58ca9c2b39834/xcode_select_device_new.png.jpg)
+   
+      1. 将 iOS 设备连接到开发电脑，单击 Xcode 上方的的 **Any iOS Device**，在弹出的选项框选择该 iOS 设备。 
+    
+      ![xcode_select_device_new.png.jpg](https://yx-web-nosdn.netease.im/common/5bf7b4e6c678580f65a58ca9c2b39834/xcode_select_device_new.png.jpg)
+          
+      ![xcode_select_real_device_new.jpg](https://yx-web-nosdn.netease.im/common/92e2c3adaf68ada15c6058a8fc5869bb/xcode_select_real_device_new.jpg)
       
-  ![xcode_select_real_device_new.jpg](https://yx-web-nosdn.netease.im/common/92e2c3adaf68ada15c6058a8fc5869bb/xcode_select_real_device_new.jpg)
-  
-  - 单击 **Build** 按钮编译和运行示例源码。
-  
-  ![xcode_build.jpg](https://yx-web-nosdn.netease.im/common/7c4635d1c30e6636a706cb668c41804c/xcode_build.jpg)
-  
-  - 运行成功后，您可以开始操作Demo。
-  
-  
+      2. 单击 **Build** 按钮编译和运行示例源码。
+      
+      ![xcode_build.jpg](https://yx-web-nosdn.netease.im/common/7c4635d1c30e6636a706cb668c41804c/xcode_build.jpg)
+      
+      3. 运行成功后，您可以开始操作Demo。
+      
+      
 ## 联系我们
 
 - 如果您需要了解详细的官网文档，请参见[音视频通话2.0 产品文档](https://doc.yunxin.163.com/nertc/docs/home-page?platform=android)
