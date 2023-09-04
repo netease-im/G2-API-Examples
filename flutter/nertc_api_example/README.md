@@ -3,39 +3,41 @@
 
 ## 示例项目结构
 音视频通话 2.0 API Example 包括如下功能：
-- 基础功能
-    - [语音通话](/Basic/AudioCall)
-    - [视频通话](/Basic/VideoCall)
+
+- [语音通话](/Basic/AudioCall)
+- [视频通话](/Basic/VideoCall)
 
 ## <span id="开发环境">开发环境</span>
 请确认您的开发环境满足以下要求
 
 - Flutter 1.22.5 及以上版本。
-    Dart 2.17.0 及以上版本。
+ 
+- Dart 2.17.0 及以上版本。
 - Android 端开发：
-    Android Studio 4.1 及以上版本。
-    App 要求 Android 5.0 及以上版本 Android 设备。
-    使用 Java 作为开发语言。
+    - Android Studio 4.1 及以上版本。
+    - App 要求 Android 5.0 及以上版本 Android 设备。
+    - 使用 Java 作为开发语言。
 - iOS 端开发：
-    Xcode 11.0 及以上版本。
-    App 要求 iOS 11 及以上版本 iOS 设备。
-    请确保您的项目已设置有效的开发者签名。
-    使用 Objective-C 作为开发语言。
+    - Xcode 11.0 及以上版本。
+    - App 要求 iOS 11 及以上版本 iOS 设备。
+    - 请确保您的项目已设置有效的开发者签名。
+    - 使用 Objective-C 作为开发语言。
 - 设备和您的开发电脑已经连接到网络。
+
 
 ## <span id="前提条件">前提条件</span>
 请确认您已完成以下操作：
 
-- <a href="https://doc.yunxin.163.com/nertc/docs/jE3OTc5NTY?platform=android" target="_blank">已创建应用</a>。
-- <a href="https://doc.yunxin.163.com/nertc/docs/jY3MzMwODA?platform=android" target="_blank">已开通音视频通话 2.0 服务</a>。
+- <a href="https://doc.yunxin.163.com/console/docs/TIzMDE4NTA?platform=console" target="_blank">创建应用</a>。
+- <a href="/docs/jcyOTA0ODM/TYzODcyNjE" target="_blank">开通音视频通话 2.0 服务</a>。
 
-## <span id="获取 App Key">获取 App Key</span>
+## <span id="获取 App Key">获取 AppKey</span>
 
-1. 在<a href="https://app.yunxin.163.com/index#/" target="_blank">网易云信控制台</a>的左侧导航栏中找到该应用，并单击应用名称。
-2. 单击 **App Key 管理**。
-3. 查看该应用的 App Key。
+1. 在<a href="https://app.yunxin.163.com/index#/" target="_blank">网易云信控制台</a>的左侧导航栏中找到您的应用，并单击应用名称。
+2. 单击 **AppKey 管理**页签，查看该应用的 App Key。
 
-    ![查看应用的AppKey](https://yx-web-nosdn.netease.im/quickhtml%2Fassets%2Fyunxin%2Fdoc%2FG2-GettingStarted-AppKey.png)
+
+    ![获取AppKey.png](https://yx-web-nosdn.netease.im/common/e50805409d30c7e65568463f5edeb2fd/获取AppKey.png)
 
 
 
