@@ -1,0 +1,19 @@
+{
+  "name": "token-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --test ./test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netease-im/G2-API-Examples.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/netease-im/G2-API-Examples/issues"
+  },
+  "homepage": "https://github.com/netease-im/G2-API-Examples#readme"
+}
