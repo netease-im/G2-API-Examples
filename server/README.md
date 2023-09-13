@@ -1,6 +1,6 @@
-# Tools
+# 云信 RTC 鉴权 token 生成示例 
 
-云信 RTC 鉴权 token 生成示例  https://doc.yunxin.163.com/nertc/docs/TQ0MTI2ODQ?platform=android
+官方文档：https://doc.yunxin.163.com/nertc/docs/TQ0MTI2ODQ?platform=android
 
 包括以下编程语言：
 
