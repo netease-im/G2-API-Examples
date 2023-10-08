@@ -1,11 +1,12 @@
 # 生成云信 RTC 鉴权的 token
 
 * 基础token：https://doc.yunxin.163.com/nertc/docs/TQ0MTI2ODQ?platform=android
+* 高级 token：https://doc.yunxin.163.com/nertc/docs/zA3MjAwNzM?platform=android
 
 
 ## 代码目录
 
-* 本目录下是一个完整的 Java 项目。`com/netease/im/rtctoken/TokenServer.java`  文件包含了基础token 的完整代码
+* 本目录下是一个完整的 Java 项目。`com/netease/im/rtctoken/TokenServer.java`  文件包含了基础token、高级 token 的完整代码
 
 ## 使用示例
 
@@ -18,10 +19,19 @@ TokenServer tokenServer = new TokenServer(appKey, appSecret, 7200);
 
 // 在需要的时候，提供 channelName（房间名）、uid（用户标识）、ttlSec（有效时间，单位秒） 参数，生成 token
 String token = tokenServer.getToken(channelName, uid, ttlSec);
+
+
+// 高级 token 具体权限说明见函数注释
+byte privilege = (byte) (1);
+long ttlSec = 1000;
+// permSecret 见云信管理后台，具体见文档说明：https://doc.yunxin.163.com/nertc/docs/zA3MjAwNzM?platform=android
+String permissionToken = tokenServer.getPermissionKey(channelName, permSecret, uid, privilege, ttlSec);
 ```
 
 ## 代码引入说明
 
 1. 复制 `com/netease/im/rtctoken/TokenServer.java` 文件到你的项目中
 2. 初始化时候调用 `new TokenServer`，生成 token 时候调用 `getToken` 方法
+3. 如果需要生成高级 token，调用 `getPermissionKey` 方法
+
 
