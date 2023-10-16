@@ -1,0 +1,3 @@
+[submodule "server/token_server/cpp/thirdparty/rapidjson"]
+	path = server/token_server/cpp/thirdparty/rapidjson
+	url = https://github.com/Tencent/rapidjson.git
