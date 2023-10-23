@@ -3,4 +3,5 @@
     <string name="video_roomid">Room ID</string>
     <string name="video_userid">User ID</string>
     <string name="btn_join_channel">Join Channel</string>
+    <string name="btn_save_frame">save frame</string>
 </resources>

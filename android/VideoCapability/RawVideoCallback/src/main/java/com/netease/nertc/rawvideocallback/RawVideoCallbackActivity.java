@@ -2,6 +2,11 @@ package com.netease.nertc.rawvideocallback;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
+import android.graphics.Rect;
+import android.graphics.YuvImage;
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
@@ -27,6 +32,10 @@ import com.netease.lava.nertc.sdk.video.NERtcVideoFrame;
 import com.netease.lava.nertc.sdk.video.NERtcVideoView;
 import com.netease.nertc.config.DemoDeploy;
 
+import java.io.ByteArrayOutputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -36,6 +45,7 @@ public class RawVideoCallbackActivity extends AppCompatActivity implements NERtc
     private ArrayList<NERtcVideoView> mRemoteVideoList;
     private EditText mUserIdView;
     private Button mStartJoinBtn;
+    private Button mSaveFrame;
     private boolean mOpen;
     private EditText mRoomIdView;
     private NERtcVideoView mLocalUserVv;
@@ -45,6 +55,7 @@ public class RawVideoCallbackActivity extends AppCompatActivity implements NERtc
     private boolean mEnableLocalAudio = true;
     private boolean mEnableLocalVideo = true;
     private String mRoomId;
+    private boolean mSaveFlag;
     private long mUserId;
 
     @Override
@@ -52,6 +63,17 @@ public class RawVideoCallbackActivity extends AppCompatActivity implements NERtc
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_raw_video_callback);
         initView();
+    }
+    public static byte[] I420ToNv21(byte[] i420bytes, int width, int height) {
+        byte[] nv21bytes = new byte[i420bytes.length];
+        int y_len = width * height;
+        int uv_len = y_len / 4;
+        System.arraycopy(i420bytes, 0, nv21bytes, 0, y_len);
+        for (int i =0; i < uv_len; i++) {
+            nv21bytes[y_len + i * 2] = i420bytes[y_len + uv_len + i];
+            nv21bytes[y_len + i * 2 + 1] = i420bytes[y_len + i];
+        }
+        return nv21bytes;
     }
 
     private void openCallback() {
@@ -62,6 +84,34 @@ public class RawVideoCallbackActivity extends AppCompatActivity implements NERtc
                 if(mOpen) {
                     Log.d(TAG,"onVideoCallback:" + videoFrame.data.length);
                 }
+                if(mSaveFlag){
+                    mSaveFlag = false;
+                    int width = videoFrame.width;
+                    int height = videoFrame.height;
+                    byte[] yuvData = I420ToNv21(videoFrame.data, width, height);
+                    // 将YUV数据转换为Bitmap
+                    YuvImage yuvImage = new YuvImage(yuvData, ImageFormat.NV21, width, height, null);
+                    ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+                    yuvImage.compressToJpeg(new Rect(0, 0, width, height), 100, byteArrayOutputStream);
+                    byte[] jpegData = byteArrayOutputStream.toByteArray();
+                    Bitmap bitmap = BitmapFactory.decodeByteArray(jpegData, 0, jpegData.length);
+
+                    // 保存Bitmap到文件
+                    String filePath = "/sdcard/test.jpg"; // 定义文件路径
+                    FileOutputStream fileOutputStream = null;
+                    try {
+                        fileOutputStream = new FileOutputStream(filePath);
+                    } catch (FileNotFoundException e) {
+                        throw new RuntimeException(e);
+                    }
+                    bitmap.compress(Bitmap.CompressFormat.JPEG, 100, fileOutputStream);
+                    try {
+                        fileOutputStream.close();
+                    } catch (IOException e) {
+                        throw new RuntimeException(e);
+                    }
+                    Toast.makeText(RawVideoCallbackActivity.this, "图片保存在/sdcard/test.jpg", Toast.LENGTH_SHORT).show();
+                }
                 return true;
             }
         },true);
@@ -71,6 +121,7 @@ public class RawVideoCallbackActivity extends AppCompatActivity implements NERtc
         mRemoteVideoList = new ArrayList<>();
         mContainer = findViewById(R.id.rl_container);
         mBackIv = findViewById(R.id.iv_back);
+        mSaveFrame = findViewById(R.id.btn_save_frame);
         mStartJoinBtn = findViewById(R.id.btn_join_channel);
         mRoomIdView = findViewById(R.id.et_room_id);
         mLocalUserVv = findViewById(R.id.vv_local_user);
@@ -79,6 +130,7 @@ public class RawVideoCallbackActivity extends AppCompatActivity implements NERtc
         mUserIdView.setText(String.valueOf(mUserId));
         mStartJoinBtn.setOnClickListener(this);
         mBackIv.setOnClickListener(this);
+        mSaveFrame.setOnClickListener(this);
 
     }
     /**
@@ -201,7 +253,13 @@ public class RawVideoCallbackActivity extends AppCompatActivity implements NERtc
             exit();
         }else if(id == R.id.btn_join_channel){
             startJoinRoom();
+        }else if(id == R.id.btn_save_frame){
+            saveFrame2sdcard();
         }
+    }
+
+    private void saveFrame2sdcard() {
+        mSaveFlag = true;
     }
 
     @Override
@@ -271,18 +329,11 @@ public class RawVideoCallbackActivity extends AppCompatActivity implements NERtc
     public void onUserVideoStart(long userId, int profile) {
         Log.i(TAG, "onUserVideoStart uid: " + userId + " profile: " + profile);
 
-        NERtcVideoView userView = mContainer.findViewWithTag(userId);
-        NERtcEx.getInstance().subscribeRemoteVideoStream(userId, NERtcRemoteVideoStreamType.kNERtcRemoteVideoStreamTypeHigh, true);
-        userView.setVisibility(View.VISIBLE);
     }
 
     @Override
     public void onUserVideoStop(long userId) {
         Log.i(TAG, "onUserVideoStop, uid=" + userId);
-        NERtcVideoView userView = mContainer.findViewWithTag(userId);
-        if(userView != null){
-            userView.setVisibility(View.INVISIBLE);
-        }
     }
 
     @Override
