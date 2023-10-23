@@ -4,15 +4,13 @@ import android.media.MediaPlayer;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.SystemClock;
+import android.os.Trace;
 import android.text.TextUtils;
 import android.util.Log;
-
-import com.netease.lava.api.Trace;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.audio.NERtcAudioExternalFrame;
 
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.concurrent.atomic.AtomicBoolean;
@@ -54,7 +52,6 @@ public class ExternalPCMAudioSource extends ExternalAudioSource {
             mFileLen = pcmFile.getChannel().size();
             mPosition = 0;
             loopCount = 0;
-            Trace.i(TAG, "file length: " + mFileLen);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -68,13 +65,10 @@ public class ExternalPCMAudioSource extends ExternalAudioSource {
 
     @Override
     public boolean start() {
-        Trace.i(TAG, "start");
         if (pcmFile == null) {
-            Trace.e(TAG, "pcm file parse error cannot start");
             return false;
         }
         if (mRunning.get()) {
-            Trace.w(TAG, "already start");
             return false;
         }
         if (mHandler != null) {
@@ -115,7 +109,6 @@ public class ExternalPCMAudioSource extends ExternalAudioSource {
                         pcmFile.seek(0);
                         loopCount++;
                         postNext(fallBehindTime);
-                        Trace.i(TAG, "data length is wrong, so loop again , loop: " + loopCount);
                         return;
                     }
                     byte[] sampleData = new byte[mSampleLength];
@@ -126,7 +119,6 @@ public class ExternalPCMAudioSource extends ExternalAudioSource {
                     postNext(fallBehindTime);
                 }catch (Exception e){
                     e.printStackTrace();
-                    Trace.w(TAG, "push warning , sub: " + isSubAudio + " , post count: " + postRunnableCount + " , exception: " + Log.getStackTraceString(e));
                 }
             }
 
@@ -149,10 +141,6 @@ public class ExternalPCMAudioSource extends ExternalAudioSource {
             private void postNext(long fallBehindTime) {
                 long delay = CUSTOM_AUDIO_TIMER_DUR - fallBehindTime;
                 if(delay < 0){
-                    Trace.w(TAG, "push warning , sub: " + isSubAudio
-                            + " , post count: " + postRunnableCount
-                            + " , fall behind: " + fallBehindTime
-                            + " , delay: " + delay);
                     delay = 0;
                 }
                 mHandler.postDelayed(this, delay);
@@ -163,7 +151,6 @@ public class ExternalPCMAudioSource extends ExternalAudioSource {
 
     @Override
     public void stop() {
-        Trace.i(TAG, "stop");
         mRunning.compareAndSet(true, false);
         if(mHandler != null){
             mHandler.removeCallbacksAndMessages(null);
@@ -183,10 +170,8 @@ public class ExternalPCMAudioSource extends ExternalAudioSource {
     @Override
     public void mute(boolean mute, boolean keepPushMuteData) {
         if (!mRunning.get()) {
-            Trace.w(TAG, "mute warning , not running : is sub " + isSubAudio );
             return;
         }
-        Trace.i(TAG, "mute: " + mute + " , keep push: " + keepPushMuteData);
         this.muteStatus = mute;
         this.keepPushMuteData = keepPushMuteData;
     }

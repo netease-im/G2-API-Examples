@@ -19,6 +19,8 @@ import com.netease.lava.nertc.sdk.NERtcConstants;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
+import com.netease.lava.nertc.sdk.NERtcUserJoinExtraInfo;
+import com.netease.lava.nertc.sdk.NERtcUserLeaveExtraInfo;
 import com.netease.lava.nertc.sdk.stats.NERtcAudioRecvStats;
 import com.netease.lava.nertc.sdk.stats.NERtcAudioSendStats;
 import com.netease.lava.nertc.sdk.stats.NERtcNetworkQualityInfo;
@@ -303,6 +305,11 @@ public class VideoqualityActivity extends AppCompatActivity implements NERtcCall
     }
 
     @Override
+    public void onUserJoined(long uid, NERtcUserJoinExtraInfo joinExtraInfo) {
+
+    }
+
+    @Override
     public void onUserLeave(long userId, int i) {
         Log.i(TAG, "onUserLeave uid: " + userId);
         NERtcVideoView userView = mContainer.findViewWithTag(userId);
@@ -315,6 +322,11 @@ public class VideoqualityActivity extends AppCompatActivity implements NERtcCall
             mUserNumbers--;
             channelUsers.setText("频道中的用户数："+ mUserNumbers);
         }
+    }
+
+    @Override
+    public void onUserLeave(long uid, int reason, NERtcUserLeaveExtraInfo leaveExtraInfo) {
+
     }
 
     @Override

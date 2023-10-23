@@ -22,6 +22,8 @@ import com.netease.lava.nertc.sdk.NERtcConstants;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
+import com.netease.lava.nertc.sdk.NERtcUserJoinExtraInfo;
+import com.netease.lava.nertc.sdk.NERtcUserLeaveExtraInfo;
 import com.netease.lava.nertc.sdk.video.NERtcVideoView;
 import com.netease.nertc.beauty.module.NEAssetsEnum;
 import com.netease.nertc.beauty.module.NEEffect;
@@ -351,7 +353,17 @@ public class BeautyActivity extends AppCompatActivity implements NERtcCallback {
     }
 
     @Override
+    public void onUserJoined(long uid, NERtcUserJoinExtraInfo joinExtraInfo) {
+
+    }
+
+    @Override
     public void onUserLeave(long l, int i) {
+
+    }
+
+    @Override
+    public void onUserLeave(long uid, int reason, NERtcUserLeaveExtraInfo leaveExtraInfo) {
 
     }
 

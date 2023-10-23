@@ -1,8 +1,6 @@
 package com.netease.nertc.audiorecord;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.graphics.Rect;
 import android.os.Bundle;
 import android.text.Editable;
 import android.util.Log;
@@ -15,14 +13,13 @@ import android.widget.Toast;
 
 import com.netease.lava.api.IVideoRender;
 import com.netease.lava.nertc.sdk.AbsNERtcCallbackEx;
-import com.netease.lava.nertc.sdk.LastmileProbeResult;
 import com.netease.lava.nertc.sdk.NERtc;
-import com.netease.lava.nertc.sdk.NERtcCallbackEx;
 import com.netease.lava.nertc.sdk.NERtcConstants;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
-import com.netease.lava.nertc.sdk.stats.NERtcAudioVolumeInfo;
+import com.netease.lava.nertc.sdk.NERtcUserJoinExtraInfo;
+import com.netease.lava.nertc.sdk.NERtcUserLeaveExtraInfo;
 import com.netease.lava.nertc.sdk.video.NERtcRemoteVideoStreamType;
 import com.netease.lava.nertc.sdk.video.NERtcVideoStreamType;
 import com.netease.lava.nertc.sdk.video.NERtcVideoView;
@@ -31,7 +28,7 @@ import com.netease.nertc.config.DemoDeploy;
 import java.io.File;
 import java.util.Random;
 
-public class AudioRecordActivity extends AppCompatActivity implements NERtcCallbackEx, View.OnClickListener {
+public class AudioRecordActivity extends AppCompatActivity implements View.OnClickListener {
     private static final String TAG = "AudioRecordActivity";
     private static final String RECORD_PATH = "record";
 
@@ -78,6 +75,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
         }
 
         @Override
+        public void onUserJoined(long uid, NERtcUserJoinExtraInfo joinExtraInfo) {
+
+        }
+
+        @Override
         public void onUserLeave(long userId, int i) {
             Log.i(TAG, "onUserLeave uid: " + userId);
             NERtcVideoView userView = mContainer.findViewWithTag(userId);
@@ -88,6 +90,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
                 //不展示远端
                 userView.setVisibility(View.INVISIBLE);
             }
+        }
+
+        @Override
+        public void onUserLeave(long uid, int reason, NERtcUserLeaveExtraInfo leaveExtraInfo) {
+
         }
 
         @Override
@@ -121,6 +128,11 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
         }
 
         @Override
+        public void onAudioEffectTimestampUpdate(long id, long timestampMs) {
+
+        }
+
+        @Override
         public void onLocalAudioVolumeIndication(int i, boolean b) {
 
         }
@@ -147,6 +159,16 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
 
         @Override
         public void onUserSubStreamAudioMute(long l, boolean b) {
+
+        }
+
+        @Override
+        public void onPermissionKeyWillExpire() {
+
+        }
+
+        @Override
+        public void onUpdatePermissionKey(String key, int error, int timeout) {
 
         }
 
@@ -266,12 +288,12 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
         }
 
         try {
-            NERtcEx.getInstance().init(getApplicationContext(), DemoDeploy.APP_KEY, this, options);
+            NERtcEx.getInstance().init(getApplicationContext(), DemoDeploy.APP_KEY, callback, options);
         } catch (Exception e) {
             // 可能由于没有release导致初始化失败，release后再试一次
             NERtcEx.getInstance().release();
             try {
-                NERtcEx.getInstance().init(getApplicationContext(), DemoDeploy.APP_KEY, this, options);
+                NERtcEx.getInstance().init(getApplicationContext(), DemoDeploy.APP_KEY, callback, options);
             } catch (Exception ex) {
                 Toast.makeText(this, "SDK初始化失败", Toast.LENGTH_LONG).show();
                 finish();
@@ -336,301 +358,5 @@ public class AudioRecordActivity extends AppCompatActivity implements NERtcCallb
             mStartRecordBtn.setText("开始录制");
         }
 
-    }
-
-
-    @Override
-    public void onJoinChannel(int result, long channelId, long elapsed, long l2) {
-        Log.i(TAG, "onJoinChannel result: " + result + " channelId: " + channelId + " elapsed: " + elapsed);
-        if (result == NERtcConstants.ErrorCode.OK) {
-            mJoinChannel = true;
-        }
-    }
-
-    @Override
-    public void onLeaveChannel(int result) {
-        Log.i(TAG, "onLeaveChannel result: " + result);
-        NERtc.getInstance().release();
-        finish();
-    }
-
-    @Override
-    public void onUserJoined(long userId) {
-        Log.i(TAG, "onUserJoined userId: " + userId);
-        Log.i(TAG, "onUserJoined");
-        if (mRemoteUserVv.getTag() == null) {
-            setupRemoteVideo(userId);
-            mRemoteUserVv.setTag(userId);
-        }
-    }
-
-    @Override
-    public void onUserLeave(long userId, int i) {
-        Log.i(TAG, "onUserLeave uid: " + userId);
-        NERtcVideoView userView = mContainer.findViewWithTag(userId);
-        if (userView != null) {
-            //设置TAG为null，代表当前没有订阅
-            userView.setTag(null);
-            NERtcEx.getInstance().subscribeRemoteVideoStream(userId, NERtcRemoteVideoStreamType.kNERtcRemoteVideoStreamTypeHigh, false);
-            //不展示远端
-            userView.setVisibility(View.INVISIBLE);
-        }
-    }
-
-    @Override
-    public void onUserAudioStart(long l) {
-
-    }
-
-    @Override
-    public void onUserAudioStop(long l) {
-
-    }
-
-    @Override
-    public void onUserVideoStart(long userId, int profile) {
-        Log.i(TAG, "onUserVideoStart uid: " + userId + " profile: " + profile);
-        NERtcVideoView userView = mContainer.findViewWithTag(userId);
-        NERtcEx.getInstance().subscribeRemoteVideoStream(userId, NERtcRemoteVideoStreamType.kNERtcRemoteVideoStreamTypeHigh, true);
-        userView.setVisibility(View.VISIBLE);
-    }
-
-    @Override
-    public void onUserVideoStop(long userId) {
-        Log.i(TAG, "onUserVideoStop, uid=" + userId);
-        NERtcVideoView userView = mContainer.findViewWithTag(userId);
-        if (userView != null) {
-            userView.setVisibility(View.INVISIBLE);
-        }
-    }
-
-    @Override
-    public void onDisconnect(int i) {
-
-    }
-
-    @Override
-    public void onError(int i) {
-
-    }
-
-    @Override
-    public void onWarning(int i) {
-
-    }
-
-    @Override
-    public void onMediaRelayStatesChange(int i, String s) {
-
-    }
-
-    @Override
-    public void onMediaRelayReceiveEvent(int i, int i1, String s) {
-
-    }
-
-    @Override
-    public void onLocalPublishFallbackToAudioOnly(boolean b, NERtcVideoStreamType neRtcVideoStreamType) {
-
-    }
-
-    @Override
-    public void onRemoteSubscribeFallbackToAudioOnly(long l, boolean b, NERtcVideoStreamType neRtcVideoStreamType) {
-
-    }
-
-    @Override
-    public void onLastmileQuality(int i) {
-
-    }
-
-    @Override
-    public void onLastmileProbeResult(LastmileProbeResult lastmileProbeResult) {
-
-    }
-
-    @Override
-    public void onMediaRightChange(boolean b, boolean b1) {
-
-    }
-
-    @Override
-    public void onVirtualBackgroundSourceEnabled(boolean b, int i) {
-
-    }
-
-    @Override
-    public void onUserSubStreamAudioStart(long l) {
-
-    }
-
-    @Override
-    public void onUserSubStreamAudioStop(long l) {
-
-    }
-
-    @Override
-    public void onUserSubStreamAudioMute(long l, boolean b) {
-
-    }
-
-    @Override
-    public void onLocalVideoWatermarkState(NERtcVideoStreamType neRtcVideoStreamType, int i) {
-
-    }
-
-    @Override
-    public void onClientRoleChange(int i, int i1) {
-
-    }
-
-    @Override
-    public void onUserSubStreamVideoStart(long l, int i) {
-
-    }
-
-    @Override
-    public void onUserSubStreamVideoStop(long l) {
-
-    }
-
-    @Override
-    public void onUserAudioMute(long l, boolean b) {
-
-    }
-
-    @Override
-    public void onUserVideoMute(long l, boolean b) {
-
-    }
-
-    @Override
-    public void onUserVideoMute(NERtcVideoStreamType neRtcVideoStreamType, long l, boolean b) {
-
-    }
-
-    @Override
-    public void onFirstAudioDataReceived(long l) {
-
-    }
-
-    @Override
-    public void onFirstVideoDataReceived(long l) {
-
-    }
-
-    @Override
-    public void onFirstVideoDataReceived(NERtcVideoStreamType neRtcVideoStreamType, long l) {
-
-    }
-
-    @Override
-    public void onFirstAudioFrameDecoded(long l) {
-
-    }
-
-    @Override
-    public void onFirstVideoFrameDecoded(long l, int i, int i1) {
-
-    }
-
-    @Override
-    public void onFirstVideoFrameDecoded(NERtcVideoStreamType neRtcVideoStreamType, long l, int i, int i1) {
-
-    }
-
-    @Override
-    public void onUserVideoProfileUpdate(long l, int i) {
-
-    }
-
-    @Override
-    public void onAudioDeviceChanged(int i) {
-
-    }
-
-    @Override
-    public void onAudioDeviceStateChange(int i, int i1) {
-
-    }
-
-    @Override
-    public void onVideoDeviceStageChange(int i) {
-
-    }
-
-    @Override
-    public void onConnectionTypeChanged(int i) {
-
-    }
-
-    @Override
-    public void onReconnectingStart() {
-
-    }
-
-    @Override
-    public void onReJoinChannel(int i, long l) {
-
-    }
-
-    @Override
-    public void onAudioMixingStateChanged(int i) {
-
-    }
-
-    @Override
-    public void onAudioMixingTimestampUpdate(long l) {
-
-    }
-
-    @Override
-    public void onAudioEffectFinished(int i) {
-
-    }
-
-    @Override
-    public void onLocalAudioVolumeIndication(int i) {
-
-    }
-
-    @Override
-    public void onLocalAudioVolumeIndication(int i, boolean b) {
-
-    }
-
-    @Override
-    public void onRemoteAudioVolumeIndication(NERtcAudioVolumeInfo[] neRtcAudioVolumeInfos, int i) {
-
-    }
-
-    @Override
-    public void onLiveStreamState(String s, String s1, int i) {
-
-    }
-
-    @Override
-    public void onConnectionStateChanged(int i, int i1) {
-
-    }
-
-    @Override
-    public void onCameraFocusChanged(Rect rect) {
-
-    }
-
-    @Override
-    public void onCameraExposureChanged(Rect rect) {
-
-    }
-
-    @Override
-    public void onRecvSEIMsg(long l, String s) {
-
-    }
-
-    @Override
-    public void onAudioRecording(int i, String s) {
-        Log.d(TAG, "onAudioRecordingResult: " + i);
     }
 }

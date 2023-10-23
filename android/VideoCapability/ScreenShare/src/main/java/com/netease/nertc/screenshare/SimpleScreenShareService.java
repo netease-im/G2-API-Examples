@@ -12,8 +12,7 @@ import android.media.projection.MediaProjection;
 import android.os.Binder;
 import android.os.Build;
 import android.os.IBinder;
-
-import com.netease.lava.api.Trace;
+import android.os.Trace;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.video.NERtcScreenConfig;
 
@@ -36,14 +35,12 @@ public class SimpleScreenShareService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Trace.i(TAG, "onBind ");
         startForeground();
         return mScreenShareBinder;
     }
 
     @Override
     public boolean onUnbind(Intent intent) {
-        Trace.i(TAG, "onUnbind");
         stopScreenCapture();
         stopForeground(true);
         return super.onUnbind(intent);
@@ -51,7 +48,6 @@ public class SimpleScreenShareService extends Service {
 
     @Override
     public void onDestroy() {
-        Trace.i(TAG, "onDestroy");
         super.onDestroy();
     }
 
@@ -95,7 +91,6 @@ public class SimpleScreenShareService extends Service {
         createNotification();
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-            Trace.i(TAG, "sdkVer:" + Build.VERSION.SDK_INT + " using FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION");
             try {
                 startForeground(NOTIFICATION_ID, screenShareNotification.getNotification(),
                         ServiceInfo.FOREGROUND_SERVICE_TYPE_MEDIA_PROJECTION);

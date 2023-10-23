@@ -19,6 +19,8 @@ import com.netease.lava.nertc.sdk.NERtcConstants;
 import com.netease.lava.nertc.sdk.NERtcEx;
 import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
+import com.netease.lava.nertc.sdk.NERtcUserJoinExtraInfo;
+import com.netease.lava.nertc.sdk.NERtcUserLeaveExtraInfo;
 import com.netease.nertc.config.DemoDeploy;
 
 import java.util.ArrayList;
@@ -303,6 +305,11 @@ public class AudioqualityActivity extends AppCompatActivity implements NERtcCall
     }
 
     @Override
+    public void onUserJoined(long uid, NERtcUserJoinExtraInfo joinExtraInfo) {
+
+    }
+
+    @Override
     public void onUserLeave(long userId, int i) {
         Log.i(TAG, "onUserLeave uid: " + userId);
         ImageView userView = mContainer.findViewWithTag(userId);
@@ -317,6 +324,11 @@ public class AudioqualityActivity extends AppCompatActivity implements NERtcCall
             userIdView.setTag(null);
             userIdView.setVisibility(View.GONE);
         }
+    }
+
+    @Override
+    public void onUserLeave(long uid, int reason, NERtcUserLeaveExtraInfo leaveExtraInfo) {
+
     }
 
     @Override

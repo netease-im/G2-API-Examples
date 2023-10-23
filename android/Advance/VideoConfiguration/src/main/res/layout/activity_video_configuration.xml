@@ -180,7 +180,7 @@
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:layout_toLeftOf="@+id/tv_xencode"
-                android:text="360" />
+                android:text="720" />
 
             <TextView
                 android:id="@+id/tv_xencode"
@@ -198,7 +198,7 @@
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
-                android:text="640" />
+                android:text="1280" />
         </RelativeLayout>
 
         <RelativeLayout
@@ -223,7 +223,7 @@
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:layout_toLeftOf="@+id/tv_xencode2"
-                android:text="360" />
+                android:text="720" />
 
             <TextView
                 android:id="@+id/tv_xencode2"
@@ -241,7 +241,7 @@
                 android:layout_width="60dp"
                 android:layout_height="50dp"
                 android:layout_alignParentRight="true"
-                android:text="640" />
+                android:text="1280" />
 
         </RelativeLayout>
 
@@ -266,7 +266,6 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="3dp"
-
                 android:layout_toRightOf="@id/tv_frame_rate"
                 android:entries="@array/frameRate" />
 
@@ -277,7 +276,7 @@
                 android:layout_centerVertical="true"
                 android:layout_marginRight="20dp"
                 android:layout_toLeftOf="@+id/et_bit_rate"
-                android:text="@string/video_framerate"
+                android:text="@string/video_bitrate"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
@@ -309,17 +308,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerVertical="true"
-                android:layout_marginRight="5dp"
-                android:layout_toLeftOf="@+id/orientation"
+                android:layout_marginEnd="5dp"
+                android:layout_toStartOf="@+id/orientation"
                 android:text="@string/video_orientation"
                 android:textColor="@color/black"
                 android:textSize="14sp" />
 
             <androidx.appcompat.widget.AppCompatSpinner
                 android:id="@+id/orientation"
-                android:layout_width="wrap_content"
+                android:layout_width="80dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true"
                 android:entries="@array/orientation" />
         </RelativeLayout>
 
