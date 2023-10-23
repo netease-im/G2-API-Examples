@@ -114,5 +114,17 @@
             android:textColor="@color/white"
             android:textSize="18sp" />
 
+        <Button
+            android:id="@+id/btn_save_frame"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/ll_set"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/common_button_bg"
+            android:text="@string/btn_save_frame"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
     </LinearLayout>
 </RelativeLayout>

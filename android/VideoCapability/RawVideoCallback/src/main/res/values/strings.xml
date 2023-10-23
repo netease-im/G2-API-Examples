@@ -3,4 +3,5 @@
     <string name="video_roomid">房间号</string>
     <string name="video_userid">用户ID</string>
     <string name="btn_join_channel">加入房间</string>
+    <string name="btn_save_frame">保存一帧</string>
 </resources>
