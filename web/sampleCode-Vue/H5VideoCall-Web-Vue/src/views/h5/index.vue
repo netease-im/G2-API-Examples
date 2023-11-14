@@ -297,20 +297,19 @@
             async setCamera(deviceId) {
                 try {
                     if (this.localStream.hasVideo()) {
-                        await this.localStream.switchDevice('video', deviceId); // 通过 NERTC.getDevices() 获取
-                    } else {
-                        await this.localStream.open({
-                            type: 'video',
-                            deviceId,
-                        });
-                        const div = this.$refs.large;
-                        this.localStream.play(div);
-                        this.localStream.setLocalRenderMode({
-                            width: div.clientWidth,
-                            height: div.clientHeight,
-                            cut: false,
-                        });
+                        await this.localStream.close({ type: 'video' })
                     }
+                    await this.localStream.open({
+                        type: 'video',
+                        deviceId,
+                    });
+                    const div = this.$refs.large;
+                    this.localStream.play(div);
+                    this.localStream.setLocalRenderMode({
+                        width: div.clientWidth,
+                        height: div.clientHeight,
+                        cut: false,
+                    });
                 } catch (error) {
                     console.log(error);
                 }
