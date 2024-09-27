@@ -22,6 +22,7 @@ import com.netease.lava.nertc.sdk.NERtcOption;
 import com.netease.lava.nertc.sdk.NERtcParameters;
 import com.netease.lava.nertc.sdk.NERtcUserJoinExtraInfo;
 import com.netease.lava.nertc.sdk.NERtcUserLeaveExtraInfo;
+import com.netease.lava.nertc.sdk.audio.NERtcAudioStreamType;
 import com.netease.lava.nertc.sdk.stats.NERtcAudioVolumeInfo;
 import com.netease.lava.nertc.sdk.video.NERtcRemoteVideoStreamType;
 import com.netease.lava.nertc.sdk.video.NERtcVideoStreamType;
@@ -323,6 +324,11 @@ public class SendSEIMsgActivity extends AppCompatActivity implements NERtcCallba
     }
 
     @Override
+    public void onLocalAudioFirstPacketSent(NERtcAudioStreamType audioStreamType) {
+
+    }
+
+    @Override
     public void onFirstVideoDataReceived(long l) {
 
     }
@@ -339,6 +345,11 @@ public class SendSEIMsgActivity extends AppCompatActivity implements NERtcCallba
 
     @Override
     public void onFirstVideoFrameDecoded(long l, int i, int i1) {
+
+    }
+
+    @Override
+    public void onFirstVideoFrameRender(long userID, NERtcVideoStreamType streamType, int width, int height, long elapsedTime) {
 
     }
 
@@ -498,6 +509,16 @@ public class SendSEIMsgActivity extends AppCompatActivity implements NERtcCallba
     }
 
     @Override
+    public void onRemoteVideoSizeChanged(long userId, NERtcVideoStreamType videoType, int width, int height) {
+
+    }
+
+    @Override
+    public void onLocalVideoRenderSizeChanged(NERtcVideoStreamType videoType, int width, int height) {
+
+    }
+
+    @Override
     public void onVirtualBackgroundSourceEnabled(boolean b, int i) {
 
     }
@@ -554,6 +575,11 @@ public class SendSEIMsgActivity extends AppCompatActivity implements NERtcCallba
 
     @Override
     public void onUserDataBufferedAmountChanged(long uid, long previousAmount) {
+
+    }
+
+    @Override
+    public void onLabFeatureCallback(String key, Object param) {
 
     }
 }

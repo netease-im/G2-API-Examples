@@ -36,4 +36,5 @@
     <string name="main_item_video_pri_sec">Video Main Sub Stream</string>
     <string name="main_item_audio_pri_sec">Audio Main Sub Stream</string>
     <string name="media_encryption">Media Encryption</string>
+    <string name="main_item_external_render">Video External Render</string>
 </resources>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="external_video_render"><![CDATA[External Video Render]]></string>
+    <string name="video_roomid">Room ID</string>
+    <string name="video_userid">User ID</string>
+    <string name="joinchannel">Join Channel</string>
+    <string name="please_join_channel">Please Join Channel</string>
+    <string name="video_width">Video Width</string>
+    <string name="video_height">Video Height</string>
+    <string name="frame_rate">Frame Rate</string>
+    <string name="angle">Angle</string>
+    <string name="please_config_video">Please Config External Video</string>
+</resources>

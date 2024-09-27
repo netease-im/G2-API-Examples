@@ -24,7 +24,7 @@
     <string name="main_item_audio_record">本地音频录制</string>
     <string name="device_management">设备管理</string>
     <string name="main_item_audio_capture_render"><![CDATA[外部音频采集&渲染]]></string>
-    <string name="main_item_video_capture"><![CDATA[外部视频采集&渲染]]></string>
+    <string name="main_item_video_capture"><![CDATA[外部视频采集]]></string>
     <string name="main_item_video_stream">旁路推流</string>
     <string name="main_item_room_switch">快速切换房间</string>
     <string name="super_resolution">超分辨率</string>
@@ -35,4 +35,5 @@
     <string name="main_item_video_pri_sec">视频主辅流</string>
     <string name="main_item_audio_pri_sec">音频主辅流</string>
     <string name="media_encryption">媒体流加密</string>
+    <string name="main_item_external_render">外部视频渲染</string>
 </resources>

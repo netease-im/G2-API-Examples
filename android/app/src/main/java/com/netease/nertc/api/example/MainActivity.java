@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-import com.netease.nertc.api.example.R;
 import com.netease.nertc.audiocall.AudioCallEntryActivity;
 import com.netease.nertc.audioeffect.AudioEffectActivity;
 import com.netease.nertc.audiomix.AudioMixActivity;
@@ -16,8 +15,8 @@ import com.netease.nertc.beauty.BeautyActivity;
 import com.netease.nertc.config.DemoDeploy;
 import com.netease.nertc.devicemanagement.DeviceManageActivity;
 import com.netease.nertc.externalaudioshare.ExternalAudioCaptureActivity;
-import com.netease.nertc.externalbeauty.ExternalBeautyActivity;
 import com.netease.nertc.externalvideocapture.ExternalVideoCaptureActivity;
+import com.netease.nertc.externalvideorender.ExternalVideoRenderActivity;
 import com.netease.nertc.externalvideoshare.ExternalVideoShareActivity;
 import com.netease.nertc.fastswitchrooms.FastSwitchRoomsActivity;
 import com.netease.nertc.mediaencryption.MediaEncryption;
@@ -78,6 +77,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ExternalVideoCaptureActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.ll_video_external_render).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ExternalVideoRenderActivity.class);
                 startActivity(intent);
             }
         });
