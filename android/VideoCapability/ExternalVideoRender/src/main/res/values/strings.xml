@@ -1,14 +1,9 @@
 <resources>
-    <string name="external_video_capture"><![CDATA[外部视频采集]]></string>
-    <string name="video_choose">选择YUV420视频文件</string>
-    <string name="choose_file">选择文件</string>
-    <string name="start_external_play">开始播放</string>
+    <string name="external_video_render"><![CDATA[外部视频渲染]]></string>
     <string name="video_roomid">房间号</string>
     <string name="video_userid">用户ID</string>
     <string name="joinchannel">加入房间</string>
     <string name="please_join_channel">请先加入房间</string>
-    <string name="stop_external_video">停止播放</string>
-    <string name="set_config">外部视频设置</string>
     <string name="video_width">视频宽</string>
     <string name="video_height">视频高</string>
     <string name="frame_rate">帧率</string>

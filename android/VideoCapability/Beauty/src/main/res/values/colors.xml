@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="main_bg">#1B1B1B</color>
+    <color name="bgm_main_bg">#1b1b1b</color>
+    <color name="common_edit_solid">#FFB0B6BE</color>
+    <color name="common_edit_stroke">#FFFFFF</color>
+    <color name="speedtest_title_bg">#B7B7B7</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="white_c">#FFCCCCCC</color>
+    <color name="base_blue">#FF337EFF</color>
+    <color name="base_red">#E6F24957</color>
+    <color name="meeting_background">#FF212129</color>
+    <color name="edit_hint">#FFB0B6BE</color>
+    <color name="semitransparent">#80000000</color>
+    <color name="green">#00FF00</color>
+
+    <color name="button_select_off">#8d8d8d</color>
+    <color name="colorPrimary">@color/white</color>
+    <color name="colorPrimaryDark">@color/white</color>
+    <color name="colorAccent">@color/base_blue</color>
+</resources>

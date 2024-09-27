@@ -1,5 +1,5 @@
 <resources>
-    <string name="external_audio_capture"><![CDATA[外部视频采集&渲染]]></string>
+    <string name="external_audio_capture"><![CDATA[外部视频采集]]></string>
     <string name="audio_choose">外部音频文件</string>
     <string name="choose_file">选择文件</string>
     <string name="startplay">开始播放</string>
