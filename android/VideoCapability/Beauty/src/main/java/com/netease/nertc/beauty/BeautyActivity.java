@@ -267,6 +267,7 @@ public class BeautyActivity extends AppCompatActivity implements NERtcCallback {
     }
     private void joinChannel(String roomId, long userId) {
         NERtcEx.getInstance().joinChannel("", roomId, userId);
+        NERtcEx.getInstance().enableBeauty(true);
     }
     /**
      * 设置本地音频可用性

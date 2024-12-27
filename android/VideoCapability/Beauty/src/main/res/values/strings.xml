@@ -1,5 +1,5 @@
 <resources>
-    <string name="video_quality">美颜</string>
+    <string name="video_beauty">云信美颜</string>
     <string name="beauty_roomid">房间号</string>
     <string name="beauty_userid">用户ID</string>
     <string name="bgm_join_channel">加入房间</string>

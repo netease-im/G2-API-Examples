@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="@string/video_quality"
+            android:text="@string/video_beauty"
             android:textColor="@color/black"
             android:textSize="20sp" />
     </LinearLayout>
