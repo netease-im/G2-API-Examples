@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vod Upload</title>
+    <script type="text/javascript" src="https://blueimp.github.io/JavaScript-MD5/js/md5.js"></script>
+    <script src="./lib/sha1.min.js"></script>
+    <script type="text/javascript" src="./upload.js"></script>
+</head>
+
+<body>
+    <div>
+        <input type="file" id="fileInput" multiple>
+        <button id="fileUploadBtn">Upload</button>
+    </div>
+    <br>
+    <div>
+        <label for="fileList">File List:</label>
+        <ul id="fileList"></ul>
+    </div>
+    <br>
+    <div>
+        <label for="progress">Progress:</label>
+        <progress id="progress" value="0" max="100"></progress>
+        <span id="progressText">0%</span>
+        <span id="curFileName"></span>
+    </div>
+    <br>
+    <div>
+        <label for="result">Success:</label>
+        <br>
+        <ul id="result"></ul>
+    </div>
+    <script type="text/javascript">
+        const opt = {
+            fileInputId: 'fileInput',
+            fileUploadId: 'fileUploadBtn',
+            getCheckSum: function () {
+                //建议将此处的AppKey、AppSecret、Nonce、CurTime等信息存储在服务端，通过接口获取
+                let AppKey = '',
+                    AppSecret = '',
+                    Nonce = Math.ceil(Math.random() * 1e9),
+                    CurTime = Math.ceil(Date.now() / 1000),
+                    CheckSum = sha1(`${AppSecret}${Nonce}${CurTime}`);
+                return {
+                    AppKey,
+                    Nonce,
+                    CurTime,
+                    CheckSum
+                }
+            },
+            onError: function (err) {
+                console.error(err)
+            },
+            onProgress: function (curFile) {
+                console.log(`curFile: ${curFile.fileName} is uploading, ${curFile.progress}%, status :${curFile.status}`);
+                document.getElementById('progress').value = curFile.progress
+                document.getElementById('progressText').innerText = curFile.progress + '%'
+                document.getElementById('curFileName').innerText = curFile.fileName
+                if (curFile.progress === 100) {
+                    document.getElementById('curFileName').innerText = ''
+                }
+            },
+            onAdd: function (curFile) {
+                const li = document.createElement('li')
+                li.innerText = curFile.file.name + ' - ' + curFile.fileSizeMb + ' MB'
+                document.getElementById('fileList').appendChild(li)
+            },
+            onUploaded: function (service, curFile) {
+                console.log('File: ' + curFile.fileName + ' is uploaded.');
+                // 将文件信息存入上传成功列表
+                service.successList.push(curFile);
+                /**
+                 * 用于获取vid等信息，暂只支持在单个文件上传成功后的回调中进行
+                 * 在全部上传成功的回调中发起请求会导致在上传失败时无法执行请求（接口的URL、参数格式、响应格式等均相同）
+                 */
+                const { AppKey, Nonce, CurTime, CheckSum } = this.getCheckSum()
+                fetch('https://vcloud.163.com/app/vod/video/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        AppKey,
+                        Nonce,
+                        CurTime,
+                        CheckSum
+                    },
+                    body: JSON.stringify({
+                        objectNames: [curFile.objectName]
+                    }),
+                }).then(res => {
+                    return res.json()
+                }).then(data => {
+                    if (data.code === 200) {
+                        const li = document.createElement('li')
+                        li.innerText = curFile.fileName + ' - ' + data.ret.list[0].vid + ' - ' + data.ret.list[0].objectName
+                        document.getElementById('result').appendChild(li)
+                    } else {
+                        this.onError({
+                            errCode: data.Code,
+                            errMsg: data.msg
+                        });
+                    }
+                }).catch(err => {
+                    this.onError(err);
+                })
+            },
+        }
+        const uploader = new Uploader(opt)
+        uploader.init()
+    </script>
+</body>
+
+</html>
