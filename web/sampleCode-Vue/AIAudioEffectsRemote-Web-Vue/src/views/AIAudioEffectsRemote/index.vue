@@ -107,6 +107,7 @@ import NERTC from "nertc-web-sdk";
 import AIAudioEffects from "nertc-web-sdk/NERTC_Web_SDK_AIAudioEffects";
 import config from "../../../config";
 import { getToken } from "../../common";
+import wasmFeatureDetect from "../../lib/wasmFeatureDetect";
 export default {
   name: "AIAudioEffects",
   data() {
@@ -122,11 +123,20 @@ export default {
       color: "#e7ad3c",
       level: 1,
       AIAudioEffectsPluginConfig: {
-        key: "AIAudioEffects",
-        pluginObj: AIAudioEffects,
-        wasmUrl:
-          "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_simd_v5.5.30.wasm" +
-          `?download=${new Date().valueOf()}`,
+        simd: {
+          key: "AIAudioEffects",
+          pluginObj: AIAudioEffects,
+          wasmUrl:
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_simd_v5.6.50.wasm" +
+            `?download=${new Date().valueOf()}`,
+        },
+        nosimd: {
+          key: "AIAudioEffects",
+          pluginObj: AIAudioEffects,
+          wasmUrl:
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_nosimd_v5.6.50.wasm" +
+            `?download=${new Date().valueOf()}`,
+        },
       },
       registerEffect: false,
     };
@@ -295,7 +305,8 @@ export default {
       if (!this.localStream) {
         return;
       }
-      const AIAudioEffectsConfig = this.AIAudioEffectsPluginConfig;
+      const type = (await wasmFeatureDetect.simd()) ? "simd" : "nosimd";
+      const AIAudioEffectsConfig = this.AIAudioEffectsPluginConfig[type];
       if (this.currentRemoteStream) {
         console.warn("this.currentRemoteStream", this.currentRemoteStream);
         this.currentRemoteStream.registerPlugin(AIAudioEffectsConfig);

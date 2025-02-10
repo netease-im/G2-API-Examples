@@ -88,6 +88,7 @@ import NERTC from "nertc-web-sdk";
 import Howling from "nertc-web-sdk/NERTC_Web_SDK_AIhowling";
 import config from "../../../config";
 import { getToken } from "../../common";
+import wasmFeatureDetect from "../../lib/wasmFeatureDetect";
 export default {
   name: "Howling",
   data() {
@@ -102,11 +103,20 @@ export default {
       color: "#e7ad3c",
       level: 1,
       AIHowlingPluginConfig: {
-        key: "AIhowling",
-        pluginObj: Howling,
-        wasmUrl:
-          "https://yx-web-nosdn.netease.im/package/NIM_Web_AIhowling_simd_v5.5.30.wasm" +
-          `?download=${new Date().valueOf()}`,
+        simd: {
+          key: "AIhowling",
+          pluginObj: Howling,
+          wasmUrl:
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIhowling_simd_v5.6.50.wasm" +
+            `?download=${new Date().valueOf()}`,
+        },
+        nosimd: {
+          key: "AIhowling",
+          pluginObj: Howling,
+          wasmUrl:
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIhowling_nosimd_v5.6.50.wasm" +
+            `?download=${new Date().valueOf()}`,
+        },
       },
       registerHowling: false,
       openHowling: false,
@@ -271,7 +281,8 @@ export default {
       if (!this.localStream) {
         return;
       }
-      const AIHowlingConfig = this.AIHowlingPluginConfig;
+      const type = (await wasmFeatureDetect.simd()) ? "simd" : "nosimd";
+      const AIHowlingConfig = this.AIHowlingPluginConfig[type];
       this.localStream.registerPlugin(AIHowlingConfig);
     },
     enableAudioEffect() {
