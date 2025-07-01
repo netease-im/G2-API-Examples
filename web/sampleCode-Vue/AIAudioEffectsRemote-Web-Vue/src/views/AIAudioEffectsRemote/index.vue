@@ -127,14 +127,14 @@ export default {
           key: "AIAudioEffects",
           pluginObj: AIAudioEffects,
           wasmUrl:
-            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_simd_v5.6.50.wasm" +
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_simd_v5.8.20.wasm" +
             `?download=${new Date().valueOf()}`,
         },
         nosimd: {
           key: "AIAudioEffects",
           pluginObj: AIAudioEffects,
           wasmUrl:
-            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_nosimd_v5.6.50.wasm" +
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_nosimd_v5.8.20.wasm" +
             `?download=${new Date().valueOf()}`,
         },
       },

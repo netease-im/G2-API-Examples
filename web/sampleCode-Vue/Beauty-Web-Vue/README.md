@@ -62,7 +62,7 @@ npm run lint
 
 ## 7.注意事项
 
--   当前功能内部署了云信的 5.6.50 版本的 sdk，如需要最新版本的 sdk 请主动去[云信官网](https://yunxin.163.com/)下载
+-   当前功能内部署了云信的 5.8.20 版本的 sdk，如需要最新版本的 sdk 请主动去[云信官网](https://yunxin.163.com/)下载
 -   从云信获取到应用 appkey 和 appSecret 之后，需要使用者主动去代码中添加：`/config/index`中
 -   云信 sdk 音视频功能，需要运行在安全环境中：https 链接或者本地链接（localhost、127.0.0.1）
 -   更多内容请访问[云信官网](https://yunxin.163.com/)了解

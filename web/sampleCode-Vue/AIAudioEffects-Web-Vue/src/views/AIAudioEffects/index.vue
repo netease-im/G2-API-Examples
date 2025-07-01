@@ -111,14 +111,14 @@ export default {
           key: "AIAudioEffects",
           pluginObj: AIAudioEffects,
           wasmUrl:
-            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_simd_v5.6.50.wasm" +
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_simd_v5.8.20.wasm" +
             `?download=${new Date().valueOf()}`,
         },
         nosimd: {
           key: "AIAudioEffects",
           pluginObj: AIAudioEffects,
           wasmUrl:
-            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_nosimd_v5.6.50.wasm" +
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_AIAudioEffects_nosimd_v5.8.20.wasm" +
             `?download=${new Date().valueOf()}`,
         },
       },
@@ -378,6 +378,11 @@ export default {
       //插件注册失败时触发
       this.localStream.on("plugin-load-error", (error) => {
         console.error("plugin-load-error", error);
+      });
+
+      //背景人声消除，默认设置15
+      this.localStream?.on("ai-denoise-enabled", () => {
+        this.localStream?.setVoiceGate(15);
       });
 
       //设置本地视频质量

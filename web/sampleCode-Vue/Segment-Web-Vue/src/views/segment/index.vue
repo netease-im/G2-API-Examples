@@ -114,14 +114,14 @@ export default {
           key: "VirtualBackground",
           pluginObj: VirtualBackground,
           wasmUrl:
-            "https://yx-web-nosdn.netease.im/package/NIM_Web_VirtualBackground_simd_v5.6.50.wasm" +
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_VirtualBackground_simd_v5.8.20.wasm" +
             `?download=${new Date().valueOf()}`,
         },
         nosimd: {
           key: "VirtualBackground",
           pluginObj: VirtualBackground,
           wasmUrl:
-            "https://yx-web-nosdn.netease.im/package/NIM_Web_VirtualBackground_nosimd_v5.6.50.wasm" +
+            "https://yx-web-nosdn.netease.im/package/NIM_Web_VirtualBackground_nosimd_v5.8.20.wasm" +
             `?download=${new Date().valueOf()}`,
         },
       },
