@@ -336,17 +336,13 @@ public class BeautyActivity extends AppCompatActivity implements NERtcCallbackEx
 
     private int getStickerPromptResId(int stickerResId) {
         if (stickerResId == R.id.rb_sticker_drinkBeer
-                || stickerResId == R.id.rb_sticker_drinkBeer2
                 || stickerResId == R.id.rb_sticker_eatZongzi) {
             return R.string.sticker_prompt_open_lipstick;
         } else if (stickerResId == R.id.rb_sticker_rabbiteating) {
             return R.string.sticker_prompt_blink;
         } else if (stickerResId == R.id.rb_sticker_yes) {
             return R.string.sticker_prompt_nod;
-        } else if (stickerResId == R.id.rb_sticker_kiss
-                || stickerResId == R.id.rb_sticker_kiss2
-                || stickerResId == R.id.rb_sticker_kiss3
-                || stickerResId == R.id.rb_sticker_kiss4) {
+        } else if (stickerResId == R.id.rb_sticker_kiss) {
             return R.string.sticker_prompt_pout;
         } else if (stickerResId == R.id.rb_sticker_money_rain) {
             return R.string.sticker_prompt_smile;
@@ -355,8 +351,6 @@ public class BeautyActivity extends AppCompatActivity implements NERtcCallbackEx
         } else if (stickerResId == R.id.rb_sticker_lipstick) {
             return R.string.sticker_prompt_purse_lips;
         } else if (stickerResId == R.id.rb_sticker_heart
-                || stickerResId == R.id.rb_sticker_heart2
-                || stickerResId == R.id.rb_sticker_heart3
                 || stickerResId == R.id.rb_sticker_package) {
             return R.string.sticker_prompt_finger_heart;
         } else if (stickerResId == R.id.rb_sticker_glass) {
