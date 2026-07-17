@@ -24,7 +24,7 @@ task clean(type: Delete) {
 }
 
 ext{
-    NertcSdk = 'com.netease.yunxin:nertc:5.8.21'
+    NertcSdk = 'com.netease.yunxin:nertc:5.10.6'
     compileSdkVersion = 29
     buildToolsVersion = "29.0.3"
     minSdkVersion = 21

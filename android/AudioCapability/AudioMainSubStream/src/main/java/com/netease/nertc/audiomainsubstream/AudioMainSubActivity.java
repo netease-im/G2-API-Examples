@@ -519,6 +519,31 @@ public class AudioMainSubActivity extends AppCompatActivity implements NERtcCall
     }
 
     @Override
+    public void onPlayStreamingStateChange(String streamId, int state, int reason) {
+
+    }
+
+    @Override
+    public void onPlayStreamingReceiveSeiMessage(String streamId, String message) {
+
+    }
+
+    @Override
+    public void onPlayStreamingFirstAudioFramePlayed(String streamId, long timeMs) {
+
+    }
+
+    @Override
+    public void onPlayStreamingFirstVideoFrameRender(String streamId, long timeMs, int width, int height) {
+
+    }
+
+    @Override
+    public void onPlayStreamingDuration(String streamId, long totalDurationS, long currentPtsS) {
+
+    }
+
+    @Override
     public void onLocalPublishFallbackToAudioOnly(boolean b, NERtcVideoStreamType neRtcVideoStreamType) {
 
     }
@@ -622,4 +647,5 @@ public class AudioMainSubActivity extends AppCompatActivity implements NERtcCall
     public void onAiData(String type, String data) {
 
     }
+
 }

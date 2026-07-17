@@ -6,6 +6,9 @@
             android:name=".BeautyActivity"
             android:exported="true">
         </activity>
+        <activity
+            android:name=".FaceUnityBeautyActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -1,0 +1,45 @@
+{
+  "elements": [
+    {
+      "path": "kiss",
+      "size": 16,
+      "suffix": "png",
+      "w": 508,
+      "h": 472,
+      "anchor": [
+        -0.6,
+        0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "point": 21,
+      "duration": 120,
+      "beat": 0,
+      "triggerloop": 1,
+      "trigger": 8
+    },
+    {
+      "path": "text",
+      "size": 1,
+      "suffix": "png",
+      "w": 784,
+      "h": 210,
+      "scale": [
+        0.5,
+        0.5
+      ],
+      "anchor": [0, 0],
+      "screenpos": [0.5, 0.79],
+      "rotate": [0, 0, 0],
+      "point": 50,
+      "beat": 0
+    }
+  ]
+}

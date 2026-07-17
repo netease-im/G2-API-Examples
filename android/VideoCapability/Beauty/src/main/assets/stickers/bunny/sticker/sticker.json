@@ -1,30 +1,19 @@
 {
     "elements": [
         {
-            "path": "ear",
-            "size": 18,
+            "path": "light",
+            "size": 1,
             "suffix": "png",
-            "w": 711,
-            "h": 429,
-            "anchor": [0.0, 1.5],
+            "w": 1500,
+            "h": 1500,
+            "anchor": [0.0, 1.0],
             "scale": [0.6, 0.6],
             "rotate": [0, 0, 0],
             "point": 2,
-            "duration": 80,
-            "beat": 0
-        },
-        {
-            "path": "ring",
-            "size": 14,
-            "suffix": "png",
-            "w": 438,
-            "h": 288,
-            "anchor": [0.0, -0.3],
-            "scale": [0.6, 0.6],
-            "rotate": [0, 0, 0],
-            "point": 15,
-            "duration": 80,
-            "beat": 0
+            "beat": 0,
+            "duration": 100000,
+            "triggerloop": 100000,
+            "trigger": 4
         },
         {
             "path": "hearta",
@@ -37,7 +26,7 @@
             "rotate": [0, 0, 0],
             "point": 3,
             "duration": 80,
-            "triggerloop": 2,
+            "triggerloop": 30,
             "trigger": 4,
             "beat": 0
         },
@@ -52,9 +41,25 @@
             "rotate": [0, 0, 0],
             "point": 4,
             "duration": 80,
-            "triggerloop": 2,
+            "triggerloop": 30,
             "trigger": 4,
             "beat": 0
+        },
+        {
+          "path": "text",
+          "size": 1,
+          "suffix": "png",
+          "w": 926,
+          "h": 184,
+          "scale": [
+            0.5,
+            0.5
+          ],
+          "anchor": [0, 0],
+          "screenpos": [0.5, 0.79],
+          "rotate": [0, 0, 0],
+          "point": 50,
+          "beat": 0
         }
     ]
 }

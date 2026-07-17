@@ -32,6 +32,7 @@
             android:id="@+id/rg_effect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:checkedButton="@id/rb_effect_smooth"
             android:orientation="horizontal">
         <RadioButton
             android:id="@+id/rb_effect_recover"

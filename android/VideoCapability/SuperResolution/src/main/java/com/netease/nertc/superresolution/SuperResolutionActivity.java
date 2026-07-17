@@ -126,7 +126,9 @@ public class SuperResolutionActivity extends AppCompatActivity implements NERtcC
         mUserId = Long.parseLong(userIdEdit.toString());
     }
     private void setupNERtc() {
+        NERtcParameters.Key enableDevEnvPram = NERtcParameters.Key.createSpecializedKey("key_test_server_uri");
         NERtcParameters parameters = new NERtcParameters();
+        parameters.set(enableDevEnvPram, true);
         NERtcEx.getInstance().setParameters(parameters); //先设置参数，后初始化
 
         NERtcOption options = new NERtcOption();

@@ -1,5 +1,6 @@
 <resources>
     <string name="video_quality">Beauty</string>
+    <string name="faceunity_beauty">FaceUnity Beauty</string>
     <string name="beauty_roomid">Room ID</string>
     <string name="beauty_userid">User ID</string>
     <string name="bgm_join_channel">Join Channel</string>
@@ -80,7 +81,39 @@
     <string name="effect_narrowface">Narrowface</string>
     <string name="effect_cheekbone">Cheekbone</string>
     <string name="effect_facesharpen">Facesharpen</string>
+    <!--sticker-->
+    <string name="sticker_origin">None</string>
+    <string name="sticker_bunny">Bunny</string>
+    <string name="sticker_rabbiteating">Rabbit</string>
+    <string name="sticker_heart">Heart</string>
+    <string name="sticker_heart2">Heart 2</string>
+    <string name="sticker_heart3">Heart 3</string>
+    <string name="sticker_crown">Crown</string>
+    <string name="sticker_glass">Glass</string>
+    <string name="sticker_yes">Grass</string>
+    <string name="sticker_kiss">Kiss</string>
+    <string name="sticker_kiss2">Kiss 2</string>
+    <string name="sticker_kiss3">Kiss 3</string>
+    <string name="sticker_kiss4">Kiss 4</string>
+    <string name="sticker_money">Money</string>
+    <string name="sticker_gift">Gift</string>
+    <string name="sticker_flower">Flower</string>
+    <string name="sticker_mouth">Lipstick</string>
+    <string name="sticker_package">Package</string>
+    <string name="sticker_drink">Drink</string>
+    <string name="sticker_drink2">Drink 2</string>
+    <string name="sticker_eat_zongzi">Zongzi</string>
+    <string name="sticker_prompt_open_lipstick">Please open your mouth</string>
+    <string name="sticker_prompt_blink">Please blink</string>
+    <string name="sticker_prompt_nod">Please nod</string>
+    <string name="sticker_prompt_pout">Please pout your lips</string>
+    <string name="sticker_prompt_smile">Please show your brightest smile within 3 seconds</string>
+    <string name="sticker_prompt_hand">Please stretch out your hand</string>
+    <string name="sticker_prompt_purse_lips">Please purse your lips</string>
+    <string name="sticker_prompt_finger_heart">Please make a finger heart gesture</string>
+    <string name="sticker_prompt_blink_red_packet">Blink to collect the red packet</string>
     <string-array name="beauty_option_tags">
+        <item>Sticker</item>
         <item>Filter</item>
         <item>Beauty</item>
     </string-array>

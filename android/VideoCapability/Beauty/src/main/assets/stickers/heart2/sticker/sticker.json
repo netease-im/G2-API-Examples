@@ -1,0 +1,44 @@
+{
+  "elements": [
+    {
+      "path": "heart",
+      "size": 42,
+      "suffix": "png",
+      "w": 960,
+      "h": 540,
+      "anchor": [
+        0.1,
+        -1.0
+      ],
+      "scale": [
+        0.5,
+        0.5
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "point": 111,
+      "duration": 120,
+      "beat": 0,
+      "showgesture": 1
+    },
+    {
+      "path": "text",
+      "size": 1,
+      "suffix": "png",
+      "w": 764,
+      "h": 208,
+      "scale": [
+        0.5,
+        0.5
+      ],
+      "anchor": [0, 0],
+      "screenpos": [0.5, 0.79],
+      "rotate": [0, 0, 0],
+      "point": 50,
+      "beat": 0
+    }
+  ]
+}

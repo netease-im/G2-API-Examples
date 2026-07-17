@@ -1,0 +1,64 @@
+{
+  "elements": [
+    {
+      "path": "drinkBeer",
+      "size": 32,
+      "suffix": "png",
+      "w": 303,
+      "h": 540,
+      "anchor": [
+        0.6,
+        0
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "point": 13,
+      "duration": 120,
+      "beat": 0,
+      "triggerloop": 1,
+      "trigger": 1
+    },
+    {
+      "path": "redFace",
+      "size": 1,
+      "suffix": "png",
+      "w": 400,
+      "h": 400,
+      "scale": [
+        1.7,
+        1.7
+      ],
+      "anchor": [0, 0.2],
+      "screenpos": [0.5, 0.79],
+      "rotate": [0, 0, 0],
+      "point": 19,
+      "beat": 0,
+      "duration": 100000,
+      "triggerloop": 100000,
+      "trigger": 1
+    },
+    {
+      "path": "text",
+      "size": 1,
+      "suffix": "png",
+      "w": 641,
+      "h": 195,
+      "scale": [
+        0.6,
+        0.6
+      ],
+      "anchor": [0, 0],
+      "screenpos": [0.5, 0.79],
+      "rotate": [0, 0, 0],
+      "point": 50,
+      "beat": 0
+    }
+  ]
+}
