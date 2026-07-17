@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:orientation="vertical"
+    android:background="@color/meeting_background"
+    tools:context=".BeautyActivity">
+
+    <HorizontalScrollView
+        android:id="@+id/horizontal_scrollv_sticker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:scrollbars="none">
+
+        <com.netease.nertc.beauty.ui.NEBeautyRadioGroup
+            android:id="@+id/rg_sticker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checkedButton="@id/rb_sticker_origin"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_sticker_origin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_makeup_remover"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_origin"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_drinkBeer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_drink"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_drinkBeer2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_drink2"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_eatZongzi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_eat_zongzi"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_yes"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_kiss"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_kiss"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_kiss3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_kiss3"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_kiss4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_kiss4"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_money_rain"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_money"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_gift"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_flower"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_flower"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_lipstick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_mouth"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_kiss2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_kiss2"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_bunny"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_bunny"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_heart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_heart"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_heart2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_heart2"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_heart3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_heart3"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_crown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_crown"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_package"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_package"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_rabbiteating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_rabbiteating"
+                android:textColor="@color/white" />
+
+            <RadioButton
+                android:id="@+id/rb_sticker_glass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_sticker_item_selector"
+                android:button="@null"
+                android:drawableTop="@drawable/ic_effect_shrinkjaw"
+                android:gravity="center"
+                android:minWidth="64dp"
+                android:padding="@dimen/filter_btn_padding"
+                android:text="@string/sticker_glass"
+                android:textColor="@color/white" />
+
+        </com.netease.nertc.beauty.ui.NEBeautyRadioGroup>
+    </HorizontalScrollView>
+</LinearLayout>

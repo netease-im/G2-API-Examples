@@ -14,6 +14,7 @@
     <string name="main_item_voice_change_setting">Voice Change</string>
     <string name="main_item_network_test">Network Test</string>
     <string name="main_item_beauty">Nertc Beauty</string>
+    <string name="main_item_faceunity_beauty">FaceUnity Beauty</string>
     <string name="virtual_background">Virtual Background</string>
     <string name="main_item_video_config">Common Video Config</string>
     <string name="main_item_video_share">External Video Share</string>

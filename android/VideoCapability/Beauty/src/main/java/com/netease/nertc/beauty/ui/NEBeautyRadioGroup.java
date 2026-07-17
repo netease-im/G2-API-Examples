@@ -26,14 +26,22 @@ public class NEBeautyRadioGroup extends RadioGroup {
     private void init(){
         super.setOnCheckedChangeListener(new CheckStateListener());
     }
+
+    @Override
+    public void setOnCheckedChangeListener(OnCheckedChangeListener listener) {
+        mOnCheckedChangeListener = listener;
+    }
+
     private class CheckStateListener implements OnCheckedChangeListener {
 
         @Override
         public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
             if (mLastCheckedId != -1) {
                 RadioButton lastCheckBtn = radioGroup.findViewById(mLastCheckedId);
-                lastCheckBtn.setTextColor(Color.WHITE);
-                lastCheckBtn.setAlpha(DEFAULT_ALPHA);
+                if (lastCheckBtn != null) {
+                    lastCheckBtn.setTextColor(Color.WHITE);
+                    lastCheckBtn.setAlpha(DEFAULT_ALPHA);
+                }
             }
             mLastCheckedId = checkedId;
             RadioButton currentBtn = radioGroup.findViewById(radioGroup.getCheckedRadioButtonId());

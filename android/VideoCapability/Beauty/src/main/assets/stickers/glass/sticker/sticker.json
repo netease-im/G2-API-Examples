@@ -1,0 +1,77 @@
+{
+  "elements": [
+    {
+      "path": "glassEffect",
+      "size": 16,
+      "suffix": "png",
+      "w": 540,
+      "h": 540,
+      "anchor": [
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "rotate": [
+        0,
+        0,
+        90
+      ],
+      "point": 3,
+      "duration": 80,
+      "triggerloop": 1,
+      "trigger": 4,
+      "beat": 0
+    },
+    {
+      "path": "glassEffect",
+      "size": 16,
+      "suffix": "png",
+      "w": 540,
+      "h": 540,
+      "anchor": [
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1
+      ],
+      "rotate": [
+        0,
+        0,
+        -90
+      ],
+      "point": 4,
+      "duration": 80,
+      "triggerloop": 1,
+      "trigger": 4,
+      "beat": 0
+    },
+    {
+      "path": "glass",
+      "size": 1,
+      "suffix": "png",
+      "w": 920,
+      "h": 590,
+      "anchor": [
+        0,
+        -0.2
+      ],
+      "scale": [
+        0.6,
+        0.6
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "point": 2,
+      "duration": 120,
+      "beat": 0
+    }
+  ]
+}

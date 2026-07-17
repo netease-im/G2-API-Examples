@@ -3,6 +3,7 @@ package com.netease.nertc.beauty.module;
 public enum NEAssetsEnum {
     EFFECTS("beauty"),
     FILTERS("filters"),
+    STICKERS("stickers"),
     MAKEUPS("makeups");
 
     private String assetsPath;

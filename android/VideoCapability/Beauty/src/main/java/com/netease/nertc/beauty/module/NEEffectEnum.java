@@ -8,7 +8,7 @@ import java.util.HashMap;
 public enum NEEffectEnum {
     WHITETEETH(R.id.rb_effect_whiteteeth, NERtcBeautyEffectType.kNERtcBeautyWhiteTeeth, 0.3f),
     LIGHTEYE(R.id.rb_effect_lighteye, NERtcBeautyEffectType.kNERtcBeautyLightEye, 0.6f),
-    WHITEN(R.id.rb_effect_whiten, NERtcBeautyEffectType.kNERtcBeautyWhiten, 0.8f),
+    WHITEN(R.id.rb_effect_whiten, NERtcBeautyEffectType.kNERtcBeautyWhiten, 0.5f),
     SMOOTH(R.id.rb_effect_smooth, NERtcBeautyEffectType.kNERtcBeautySmooth, 0.65f),
     SMALLNOSE(R.id.rb_effect_smallnose, NERtcBeautyEffectType.kNERtcBeautySmallNose, 0.4f),
     EYEDIS(R.id.rb_effect_eyedis, NERtcBeautyEffectType.kNERtcBeautyEyeDis, 0.4f),

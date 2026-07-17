@@ -1,5 +1,6 @@
 <resources>
     <string name="video_beauty">云信美颜</string>
+    <string name="faceunity_beauty">相芯美颜</string>
     <string name="beauty_roomid">房间号</string>
     <string name="beauty_userid">用户ID</string>
     <string name="bgm_join_channel">加入房间</string>
@@ -80,7 +81,40 @@
     <string name="effect_narrowface">窄脸</string>
     <string name="effect_cheekbone">脸颊</string>
     <string name="effect_facesharpen">锐化</string>
+    <!--sticker-->
+    <string name="sticker_origin">无</string>
+    <string name="sticker_bunny">兔子</string>
+    <string name="sticker_rabbiteating">吃萝卜</string>
+    <string name="sticker_heart">心</string>
+    <string name="sticker_heart2">心2</string>
+    <string name="sticker_heart3">心3</string>
+    <string name="sticker_crown">皇冠</string>
+    <string name="sticker_glass">墨镜</string>
+    <string name="sticker_yes">聪明草</string>
+    <string name="sticker_kiss">亲亲\n</string>
+    <string name="sticker_kiss3">亲亲3</string>
+    <string name="sticker_kiss4">亲亲4</string>
+    <string name="sticker_money">红包雨</string>
+    <string name="sticker_gift">礼物</string>
+    <string name="sticker_flower">花</string>
+    <string name="sticker_mouth">口红\n</string>
+    <string name="sticker_kiss2">亲亲2</string>
+    <string name="sticker_package">红包</string>
+    <string name="sticker_drink">喝酒</string>
+    <string name="sticker_drink2">喝酒2</string>
+    <string name="sticker_eat_zongzi">吃粽子</string>
+    <string name="sticker_prompt_open_lipstick">请张开嘴巴</string>
+    <string name="sticker_prompt_blink">请眨眨眼</string>
+    <string name="sticker_prompt_nod">请点头</string>
+    <string name="sticker_prompt_pout">请堵起嘴巴</string>
+    <string name="sticker_prompt_smile">请在3秒内露出最灿烂的笑容</string>
+    <string name="sticker_prompt_hand">请伸出纤纤细手</string>
+    <string name="sticker_prompt_purse_lips">请抿起嘴巴</string>
+    <string name="sticker_prompt_finger_heart">请做出比心手势</string>
+    <string name="sticker_prompt_blink_red_packet">眨眨眼睛收获红包</string>
+    <string name="sticker_prompt_gift">请抬起手触摸消息领取礼物</string>
     <string-array name="beauty_option_tags">
+        <item>贴纸</item>
         <item>滤镜</item>
         <item>美颜</item>
     </string-array>

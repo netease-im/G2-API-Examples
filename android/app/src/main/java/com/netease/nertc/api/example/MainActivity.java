@@ -12,6 +12,7 @@ import com.netease.nertc.audiomainsubstream.AudioMainSubActivity;
 import com.netease.nertc.audioquality.AudioqualityActivity;
 import com.netease.nertc.audiorecord.AudioRecordActivity;
 import com.netease.nertc.beauty.BeautyActivity;
+import com.netease.nertc.beauty.FaceUnityBeautyActivity;
 import com.netease.nertc.config.DemoDeploy;
 import com.netease.nertc.devicemanagement.DeviceManageActivity;
 
@@ -35,6 +36,7 @@ import com.netease.nertc.videomainsubstream.VideoMainSubStreamActivity;
 import com.netease.nertc.videoquality.VideoqualityActivity;
 import com.netease.nertc.videostream.VideoStreamActivity;
 import com.netease.nertc.virtualbackground.VirtualBackgroundActivity;
+import com.netease.rtcdemo.R;
 
 /**
  * NERtc API-Example 主页面
@@ -200,6 +202,13 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, BeautyActivity.class);
+                startActivity(intent);
+            }
+        });
+        findViewById(R.id.ll_faceunity_beauty).setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FaceUnityBeautyActivity.class);
                 startActivity(intent);
             }
         });

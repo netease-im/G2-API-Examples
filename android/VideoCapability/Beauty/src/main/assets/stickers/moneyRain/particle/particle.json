@@ -1,0 +1,39 @@
+{
+	"textures": [{
+			"texid":	"img_00",
+			"path":   "money.png",
+			"w":	2431,
+			"h":	540,
+			"sizex":	3,
+			"sizey":	1,
+			"num": 3,
+			"duration":	340,
+			"seqmode":	4
+		}],
+	"elements": [{
+			"texid":	"img_00",
+			"maxcout":	10000,
+			"generate":	0.1,
+			"lifetime": 6000,
+			"mincolor":	[1.0, 1.0, 1.0, 1.0],
+			"maxcolor":	[1.0, 1.0, 1.0, 1.0],
+			"incolor": [0.2, 0.0, 0.2, 0.0],
+			"inpercent": 0.0,
+			"outcolor": [0.2, 0.0, 0.2, 0.0],
+			"outpercent": 0.0,
+			"minstartsize": 3,
+			"maxstartsize": 3,
+			"minendsize": 3,
+			"maxendsize": 3,
+			"minpos":	[-50, 5, -20],
+			"maxpos":	[50, 10, -20],
+			"minspeed": [0, -0.0025, 0],
+			"maxspeed":	[0, -0.005, 0],
+			"minacc": [0, 0, 0],
+			"maxacc": [0, 0, 0],
+			"minrotate": 0,
+			"maxrotate": 0.1,
+			"bm": 0,
+            "trigger": 16
+		}]
+}

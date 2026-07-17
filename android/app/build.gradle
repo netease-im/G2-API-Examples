@@ -6,7 +6,7 @@ android {
     ndkVersion "16.1.4479499"
 
     defaultConfig {
-        applicationId "com.netease.nertc.apiexample"
+        applicationId "com.netease.rtcdemo"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,0 +1,28 @@
+{
+  "elements": [
+    {
+      "path": "package",
+      "size": 2,
+      "suffix": "png",
+      "w": 540,
+      "h": 540,
+      "anchor": [
+        0,
+        -0.7
+      ],
+      "scale": [
+        1.0,
+        1.0
+      ],
+      "rotate": [
+        0,
+        0,
+        0
+      ],
+      "point": 111,
+      "duration": 220,
+      "beat": 0,
+      "showgesture": 1
+    }
+  ]
+}

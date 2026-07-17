@@ -101,6 +101,11 @@ public class RawAudioCallbackActivity extends AppCompatActivity implements NERtc
             public void onPlaybackSubStreamAudioFrameBeforeMixingWithUserID(long l, NERtcAudioFrame neRtcAudioFrame, long l1) {
                 Log.d(TAG,"onPlaybackSubStreamAudioFrameBeforeMixingWithUserID");
             }
+
+            @Override
+            public void onPlaybackAudioFrameBeforeMixingForPlayStreaming(String playStreamId, NERtcAudioFrame audioFrame) {
+
+            }
         });
     }
 
