@@ -48,19 +48,6 @@
                 android:textColor="@color/white" />
 
             <RadioButton
-                android:id="@+id/rb_sticker_drinkBeer2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_sticker_item_selector"
-                android:button="@null"
-                android:drawableTop="@drawable/ic_effect_shrinkjaw"
-                android:gravity="center"
-                android:minWidth="64dp"
-                android:padding="@dimen/filter_btn_padding"
-                android:text="@string/sticker_drink2"
-                android:textColor="@color/white" />
-
-            <RadioButton
                 android:id="@+id/rb_sticker_eatZongzi"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -97,32 +84,6 @@
                 android:minWidth="64dp"
                 android:padding="@dimen/filter_btn_padding"
                 android:text="@string/sticker_kiss"
-                android:textColor="@color/white" />
-
-            <RadioButton
-                android:id="@+id/rb_sticker_kiss3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_sticker_item_selector"
-                android:button="@null"
-                android:drawableTop="@drawable/ic_effect_shrinkjaw"
-                android:gravity="center"
-                android:minWidth="64dp"
-                android:padding="@dimen/filter_btn_padding"
-                android:text="@string/sticker_kiss3"
-                android:textColor="@color/white" />
-
-            <RadioButton
-                android:id="@+id/rb_sticker_kiss4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_sticker_item_selector"
-                android:button="@null"
-                android:drawableTop="@drawable/ic_effect_shrinkjaw"
-                android:gravity="center"
-                android:minWidth="64dp"
-                android:padding="@dimen/filter_btn_padding"
-                android:text="@string/sticker_kiss4"
                 android:textColor="@color/white" />
 
             <RadioButton
@@ -178,19 +139,6 @@
                 android:textColor="@color/white" />
 
             <RadioButton
-                android:id="@+id/rb_sticker_kiss2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_sticker_item_selector"
-                android:button="@null"
-                android:drawableTop="@drawable/ic_effect_shrinkjaw"
-                android:gravity="center"
-                android:minWidth="64dp"
-                android:padding="@dimen/filter_btn_padding"
-                android:text="@string/sticker_kiss2"
-                android:textColor="@color/white" />
-
-            <RadioButton
                 android:id="@+id/rb_sticker_bunny"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -214,45 +162,6 @@
                 android:minWidth="64dp"
                 android:padding="@dimen/filter_btn_padding"
                 android:text="@string/sticker_heart"
-                android:textColor="@color/white" />
-
-            <RadioButton
-                android:id="@+id/rb_sticker_heart2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_sticker_item_selector"
-                android:button="@null"
-                android:drawableTop="@drawable/ic_effect_shrinkjaw"
-                android:gravity="center"
-                android:minWidth="64dp"
-                android:padding="@dimen/filter_btn_padding"
-                android:text="@string/sticker_heart2"
-                android:textColor="@color/white" />
-
-            <RadioButton
-                android:id="@+id/rb_sticker_heart3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_sticker_item_selector"
-                android:button="@null"
-                android:drawableTop="@drawable/ic_effect_shrinkjaw"
-                android:gravity="center"
-                android:minWidth="64dp"
-                android:padding="@dimen/filter_btn_padding"
-                android:text="@string/sticker_heart3"
-                android:textColor="@color/white" />
-
-            <RadioButton
-                android:id="@+id/rb_sticker_crown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_sticker_item_selector"
-                android:button="@null"
-                android:drawableTop="@drawable/ic_effect_shrinkjaw"
-                android:gravity="center"
-                android:minWidth="64dp"
-                android:padding="@dimen/filter_btn_padding"
-                android:text="@string/sticker_crown"
                 android:textColor="@color/white" />
 
             <RadioButton
