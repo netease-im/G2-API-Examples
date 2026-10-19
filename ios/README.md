@@ -15,6 +15,7 @@
     - [音效伴音](./Advanced/SetBackgroundMusic)
     - [美声变声](./Advanced/AudioChange)
     - [自定义视频采集&渲染](./Advanced/CustomCamera)
+    - [外部视频渲染](./Advanced/ExternalVideoRender)
     - [通话前网络测试](./Advanced/SpeedTest)
     - [音质设定](./Advanced/SetAudioQuality)
     - [画质设定](./Advanced/SetVideoQuality)

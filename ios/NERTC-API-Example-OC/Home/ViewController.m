@@ -80,6 +80,11 @@
                        @"class": @"CustomCaptureViewController"
                    },
                    @{
+                       @"title": (@"外部视频渲染"),
+                       @"desc": @"复用 NERTC Demo 的 OpenGL/Metal 渲染组件接管本地和远端视频帧",
+                       @"class": @"ExternalVideoRenderViewController"
+                   },
+                   @{
                        @"title": (@"旁路推流"),
                        @"desc": @"",
                        @"class":@"VideoStreamViewController"
