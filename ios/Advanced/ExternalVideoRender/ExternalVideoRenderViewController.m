@@ -5,6 +5,8 @@
 
 #import "ExternalVideoRenderViewController.h"
 
+#import <AVFoundation/AVFoundation.h>
+
 #import "NTESExternalRenderView.h"
 #import "NTESOpenGLView.h"
 #import "NTESAppConfig.h"
@@ -41,12 +43,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    NSLog(@"[ExternalVideoRender] appKey: %@, bundleId: %@",
+          AppKey,
+          NSBundle.mainBundle.bundleIdentifier);
+    [self logCameraAuthorizationStatus];
     [self setupUI];
-    [self setupNERtcEngine];
-    [NERtcEngine.sharedEngine enableLocalAudio:YES];
-    [NERtcEngine.sharedEngine enableLocalVideo:YES];
+    int setupResult = [self setupNERtcEngine];
+    NSLog(@"[ExternalVideoRender] setupEngineWithContext result: %d", setupResult);
+    int audioResult = [NERtcEngine.sharedEngine enableLocalAudio:YES];
+    NSLog(@"[ExternalVideoRender] enableLocalAudio result: %d", audioResult);
+    int videoResult = [NERtcEngine.sharedEngine enableLocalVideo:YES];
+    NSLog(@"[ExternalVideoRender] enableLocalVideo result: %d", videoResult);
     [self setupLocalExternalVideoCanvas];
     [self joinCurrentRoom];
+}
+
+- (void)logCameraAuthorizationStatus {
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    NSLog(@"[ExternalVideoRender] camera authorization status: %ld", (long)status);
+    if (status == AVAuthorizationStatusNotDetermined) {
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo
+                                 completionHandler:^(BOOL granted) {
+            NSLog(@"[ExternalVideoRender] camera authorization granted: %d", granted);
+        }];
+    }
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -152,7 +172,7 @@
     }
 }
 
-- (void)setupNERtcEngine {
+- (int)setupNERtcEngine {
     NERtcLogSetting *logSetting = [[NERtcLogSetting alloc] init];
 #if DEBUG
     logSetting.logLevel = kNERtcLogLevelInfo;
@@ -165,7 +185,7 @@
     context.engineDelegate = self;
     context.appKey = AppKey;
     context.logSetting = logSetting;
-    [coreEngine setupEngineWithContext:context];
+    return [coreEngine setupEngineWithContext:context];
 }
 
 - (void)setupLocalExternalVideoCanvas {
@@ -182,16 +202,26 @@
 
 - (void)joinCurrentRoom {
     // 如采用安全模式，则需填入相应 Token。
-    [NERtcEngine.sharedEngine joinChannelWithToken:@""
-                                       channelName:self.roomId
-                                             myUid:self.userId
-                                        completion:^(NSError *_Nullable error, uint64_t channelId, uint64_t elapesd, uint64_t uid) {
+    int joinResult = [NERtcEngine.sharedEngine joinChannelWithToken:@""
+                                                        channelName:self.roomId
+                                                              myUid:self.userId
+                                                         completion:^(NSError *_Nullable error, uint64_t channelId, uint64_t elapesd, uint64_t uid) {
         if (error) {
-            NSLog(@"[ExternalVideoRender] Join channel failed: %@", error.localizedDescription);
+            NSLog(@"[ExternalVideoRender] Join channel failed: code=%ld, %@, userInfo=%@",
+                  (long)error.code,
+                  error.localizedDescription,
+                  error.userInfo);
         } else {
-            NSLog(@"[ExternalVideoRender] Join channel success, channelId: %llu", channelId);
+            NSLog(@"[ExternalVideoRender] Join channel success, channelId: %llu, uid: %llu, elapsed: %llu",
+                  channelId,
+                  (unsigned long long)uid,
+                  (unsigned long long)elapesd);
         }
     }];
+    NSLog(@"[ExternalVideoRender] joinChannelWithToken result: %d, roomId: %@, uid: %llu",
+          joinResult,
+          self.roomId,
+          (unsigned long long)self.userId);
 }
 
 - (void)bindRemoteUserID:(uint64_t)userID {

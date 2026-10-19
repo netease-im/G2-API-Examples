@@ -20,6 +20,8 @@
 
 @implementation NTESOpenGLView
 
+static NSUInteger gExternalRenderFrameCount = 0;
+
 - (id) initWithFrame:(CGRect)frame format:(UInt32)format
 {
     if (self = [super initWithFrame:frame]) {
@@ -88,6 +90,15 @@
 #pragma mark - NERtcEngineVideoRenderSink
 - (void)onNERtcEngineRenderFrame:(NERtcVideoFrame *)frame
 {
+      gExternalRenderFrameCount++;
+      if (gExternalRenderFrameCount == 1 || gExternalRenderFrameCount % 300 == 0) {
+          NSLog(@"[ExternalVideoRender] render frame #%lu, size: %dx%d, rotation: %d",
+                (unsigned long)gExternalRenderFrameCount,
+                frame.width,
+                frame.height,
+                (int)frame.rotation);
+      }
+
       int dataLength = frame.width * frame.height * 3 / 2;
     
       BOOL rotateWH = NO;

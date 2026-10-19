@@ -41,6 +41,10 @@ Metal 纹理。
 
 ## 注意事项
 
+- iOS 必须使用完整版 `NERtcSDK`（`Podfile` 中的 `pod 'NERtcSDK'`），不能使用
+  纯音频版的 `NERtcSDKAudio`。后者调用 `enableLocalVideo:` 和
+  `setupLocalVideoCanvas:` 会返回 `30004（kNERtcErrNotSupported）`，表现为可以
+  正常加入房间，但相机不会打开、也收不到视频帧。
 - 外部渲染只影响本端看到画面，不影响编码、发送和远端画面。
 - `useExternalRender = YES` 时不要设置 `container`，两者不要混用。
 - 外部渲染不支持在通话中与内置渲染来回切换，建议在加入房间前确定。
@@ -52,5 +56,6 @@ Metal 纹理。
 ## 运行
 
 1. 在 `Debug/NTESAppConfig.h` 中配置 AppKey。
-2. 运行 Demo，在首页选择“外部视频渲染”。
-3. 输入相同的房间号、不同的用户 ID，可在两台设备上查看本地和远端画面。
+2. 在 `ios` 目录执行 `pod install`，确认安装的是完整版 `NERtcSDK`。
+3. 运行 Demo，在首页选择“外部视频渲染”。
+4. 输入相同的房间号、不同的用户 ID，可在两台设备上查看本地和远端画面。
