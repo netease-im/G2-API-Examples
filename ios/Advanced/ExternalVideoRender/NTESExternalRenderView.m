@@ -31,4 +31,18 @@
     return renderView;
 }
 
++ (NTESExternalRenderView *)generateExternalRenderViewWithType:(NTESExternalRenderViewType)viewType {
+    switch (viewType) {
+        case NTESExternalRenderViewTypeMetal:
+            return (NTESExternalRenderView *)[[NTESMetalView alloc]
+                    initWithFrame:CGRectZero
+                        bufferType:NTESVideoBufferTypeMetalTexture
+                        pixelFormat:NTESVideoPixelFormatBGRA];
+        case NTESExternalRenderViewTypeOpenGL:
+        default:
+            return (NTESExternalRenderView *)[[NTESOpenGLView alloc]
+                    initWithFrame:CGRectZero format:SDL_FCC_I420];
+    }
+}
+
 @end

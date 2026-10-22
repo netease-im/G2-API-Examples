@@ -21,6 +21,11 @@ import com.netease.lava.webrtc.Logging;
 import com.netease.lava.webrtc.VideoFrame;
 
 public class DemoRtcVideoView extends FrameLayout implements IVideoRender {
+    public enum RendererType {
+        SURFACE,
+        TEXTURE
+    }
+
     private String TAG = "DemoRtcVideoView";
     private IVideoRender render;
     private boolean videoBufferTypePrinted;
@@ -34,10 +39,22 @@ public class DemoRtcVideoView extends FrameLayout implements IVideoRender {
     }
 
     public void init(Context context, EglBase.Context eglContext, boolean mainStream, int bufferType) {
+        init(context, eglContext, mainStream, bufferType, RendererType.SURFACE);
+    }
+
+    public void init(Context context, EglBase.Context eglContext, boolean mainStream, int bufferType,
+                     RendererType rendererType) {
         TAG = TAG + "_" + (mainStream ? "main" : "sub");
 
-        render = new SurfaceViewRenderer(context);
-        ((SurfaceViewRenderer) render).init(eglContext, null, bufferType, mainStream);
+        if (rendererType == RendererType.TEXTURE) {
+            TextureViewExternalRenderer textureRenderer = new TextureViewExternalRenderer(context);
+            textureRenderer.init(eglContext, null, bufferType, mainStream);
+            render = textureRenderer;
+        } else {
+            SurfaceViewRenderer surfaceRenderer = new SurfaceViewRenderer(context);
+            surfaceRenderer.init(eglContext, null, bufferType, mainStream);
+            render = surfaceRenderer;
+        }
 
         render.setExternalRender(true);
         LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
@@ -135,6 +152,8 @@ public class DemoRtcVideoView extends FrameLayout implements IVideoRender {
     public void release() {
         if (render instanceof SurfaceViewRenderer) {
             ((SurfaceViewRenderer) render).release();
+        } else if (render instanceof TextureViewExternalRenderer) {
+            ((TextureViewExternalRenderer) render).release();
         }
     }
     public IVideoRender getRenderer() {

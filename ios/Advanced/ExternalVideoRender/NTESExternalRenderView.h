@@ -12,9 +12,15 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSUInteger, NTESExternalRenderViewType) {
+    NTESExternalRenderViewTypeOpenGL = 0,
+    NTESExternalRenderViewTypeMetal,
+};
+
 @interface NTESExternalRenderView : UIView<NERtcEngineVideoRenderSink>
 
 + (NTESExternalRenderView *)generateExternalRenderViewWithBufferType:(NTESVideoBufferType)bufferType;
++ (NTESExternalRenderView *)generateExternalRenderViewWithType:(NTESExternalRenderViewType)viewType;
 
 @end
 
