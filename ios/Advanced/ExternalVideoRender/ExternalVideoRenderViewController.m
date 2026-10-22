@@ -126,7 +126,10 @@
     panel.layer.cornerRadius = 8.0;
     panel.clipsToBounds = YES;
 
-    NTESExternalRenderView *renderView = [NTESExternalRenderView generateExternalRenderViewWithBufferType:NTESVideoBufferTypeRawData];
+    NTESExternalRenderViewType viewType = isRemote
+        ? NTESExternalRenderViewTypeMetal
+        : NTESExternalRenderViewTypeOpenGL;
+    NTESExternalRenderView *renderView = [NTESExternalRenderView generateExternalRenderViewWithType:viewType];
     renderView.translatesAutoresizingMaskIntoConstraints = NO;
     [panel addSubview:renderView];
 
@@ -157,10 +160,12 @@
         self.remoteRenderView = renderView;
         self.remoteStatusLabel = titleLabel;
         renderView.hidden = YES;
+        NSLog(@"[ExternalVideoRender] remote renderer: Metal/MTKView");
     } else {
         self.localRenderView = renderView;
         // 本地预览镜像；Demo 的 NTESOpenGLView 未提供 mirror 属性，直接翻转视图。
         self.localRenderView.transform = CGAffineTransformMakeScale(-1.0, 1.0);
+        NSLog(@"[ExternalVideoRender] local renderer: OpenGL/IJKSDL");
     }
 
     return panel;

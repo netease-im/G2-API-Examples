@@ -176,7 +176,9 @@ public class ExternalVideoRenderActivity extends AppCompatActivity implements NE
     }
 
     private void setupRemoteExternalVideoCanvas(long userId){
-        mRemoteUserVv.init(this, eglBase.getEglBaseContext(), true, NERtcConstants.NERtcExternalVideoRendererBufferType.I420);
+        mRemoteUserVv.init(this, eglBase.getEglBaseContext(), true,
+                NERtcConstants.NERtcExternalVideoRendererBufferType.I420,
+                DemoRtcVideoView.RendererType.TEXTURE);
         mRemoteUserVv.setScalingType(IVideoRender.ScalingType.SCALE_ASPECT_FIT);
         NERtcEx.getInstance().setRemoteExternalVideoRenderer(NERtcVideoStreamType.kNERtcVideoStreamTypeMain,userId ,(NERtcExternalVideoRenderer) mRemoteUserVv.getRenderer());
     }
